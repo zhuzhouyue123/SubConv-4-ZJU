@@ -34,6 +34,10 @@ def welcome():
     # return "Hello World!"
     url = "https://proxy-provider-converter.geniucker.vercel.app"\
           "/api/convert?target=clash&url="
+    status_code = get(url).status_code
+    if 200 != status_code:
+        abort(status_code)
+        return
     url += request.args.get("url")
     result = head + pp1 + url + pp2 + pg + "rules:\n" + getFullRule()
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
