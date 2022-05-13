@@ -1,7 +1,7 @@
 # coding=utf-8
 from ruleList import ruleList
 from base import head, pp1, pp2, pg
-from flask import Flask, request
+from flask import Flask, request, abort
 from requests import get
 app = Flask(__name__)
 
@@ -26,6 +26,8 @@ def getFullRule():
     result = ""
     for i in ruleList:
         result += getRule(i[0], i[1])
+    result += """ - GEOIP,CN,🎯 全球直连
+ - MATCH,🐟 漏网之鱼"""
     return result
 
 
