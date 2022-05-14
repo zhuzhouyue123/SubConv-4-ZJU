@@ -14,7 +14,7 @@ def getRule(sort, url):
     i = 0
     while(i < len(item)):
         tem = item[i]
-        if "" == tem or "#" == tem[0]:
+        if "" == tem or "#" == tem[0] or "USER-AGENT" in tem:
             item.remove(tem)
             i -= 1
         else:
