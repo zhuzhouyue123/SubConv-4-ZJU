@@ -3,6 +3,7 @@ from ruleList import ruleList
 from base import head, pp1, pp2, pg
 from flask import Flask, request, abort
 from requests import get
+from re import search
 app = Flask(__name__)
 
 
@@ -16,9 +17,15 @@ def getRule(sort, url):
         if "" == tem or "#" == tem[0]:
             item.remove(tem)
             i -= 1
+        else:
+            tem2 = search("(.+,.+)(,.+)", tem)
+            if tem2 is not None:
+                item[i] = tem2.group(1) + "," + sort + tem2.group(2)
+            else:
+                item[i] += "," + sort
         i += 1
     for i in range(len(item)):
-        result += " - " + item[i] + "," + sort + "\n"
+        result += " - " + item[i] + "\n"
     return result
 
 
