@@ -10,7 +10,7 @@ pp1 = """proxy-providers:
     type: http
     url: """
 pp2 = """
-    interval: 3600
+    interval: 600
     path: ./subscription.yaml
     health-check:
       enable: true
