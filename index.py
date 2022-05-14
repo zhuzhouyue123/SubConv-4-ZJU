@@ -1,6 +1,6 @@
 # coding=utf-8
 from ruleList import ruleList
-from base import head, pp1, pp2, pg
+from base import head, pp1, pp2, pp3, pg
 from flask import Flask, request, abort
 from requests import get
 from re import search
@@ -43,14 +43,20 @@ def getFullRule():
 @app.route("/sub")
 def welcome():
     # return "Hello World!"
-    url = request.args.get("url")
+    url = request.args
+    if "interval" in url:
+        interval = url["interval"]
+    else:
+        interval = "600"
+    url = url.get("url")
     status_code = get(url).status_code
     if 200 != status_code:
         abort(status_code)
         return
     url = "https://proxy-provider-converter.geniucker.vercel.app"\
           "/api/convert?target=clash&url=" + url
-    result = head + pp1 + url + pp2 + pg + "rules:\n" + getFullRule()
+    result = head + pp1 + url + pp2 + interval + pp3 + pg\
+                  + "rules:\n" + getFullRule()
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
 
