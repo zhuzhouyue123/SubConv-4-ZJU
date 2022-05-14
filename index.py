@@ -1,7 +1,7 @@
 # coding=utf-8
 from head import head, pp1, pp2, pp3, pg
 from base import getFullRule
-from flask import Flask, request, abort
+from flask import Flask, request, abort, render_template
 from requests import get
 from urllib.parse import urlencode
 
@@ -9,8 +9,13 @@ from urllib.parse import urlencode
 app = Flask(__name__)
 
 
-@app.route("/sub")
+@app.route("/")
 def index():
+    return render_template("index.html")
+
+
+@app.route("/sub")
+def sub():
     # return "Hello World!"
     url = request.args
     if "interval" in url:
