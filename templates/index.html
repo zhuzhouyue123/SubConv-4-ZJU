@@ -1,4 +1,21 @@
-使用手册：
-本接口用于一元机场的订阅转换（大概率不适用于别的机场），由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点
-<br>
+<meta charset="utf-8">
+# 使用说明
+本接口适用于一元机场的订阅转换（大概率不适用于别的机场），由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点
 
+## 接口语法
+目前本接口仅支持get请求  
+接口链接：[https://sub-conv.geniucker.vercel.app/sub](https://sub-conv.geniucker.vercel.app/sub)  
+支持的参数有:  
+  1. `url`：值为你的一元机场订阅链接  
+  2. `interval`：（可选）值为自动拉取节点的时间间隔，单位为秒，若无此参数则默认为600  
+示例：  
+不指定时间间隔
+```
+https://sub-conv.geniucker.vercel.app/sub?url=<订阅链接>
+```
+指定时间间隔  
+```
+https://sub-conv.geniucker.vercel.app/sub?url=<订阅链接>&interval=<时间间隔>
+```
+
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js" charset="utf-8"></script><script src="{{ url_for('static',filename='js/markdeep.js')  }}" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

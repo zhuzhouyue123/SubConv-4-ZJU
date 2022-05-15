@@ -21,7 +21,7 @@ pp3 = """
   hk:
     type: file
     path: ./subscription.yaml
-    interval: 600
+    interval: 300
     filter: '🇭🇰'
     health-check:
       enable: true
@@ -31,7 +31,7 @@ pp3 = """
   sg:
     type: file
     path: ./subscription.yaml
-    interval: 600
+    interval: 300
     filter: '🇸🇬'
     health-check:
       enable: true
@@ -41,7 +41,7 @@ pp3 = """
   jp:
     type: file
     path: ./subscription.yaml
-    interval: 600
+    interval: 300
     filter: '🇯🇵'
     health-check:
       enable: true
