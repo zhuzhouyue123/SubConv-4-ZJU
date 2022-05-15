@@ -1,5 +1,5 @@
 # coding=utf-8
-from head import head, pp1, pp2, pp3, pg
+from head import head, pp, pg
 from base import getFullRule
 from flask import Flask, request, abort, render_template
 from requests import get
@@ -33,8 +33,8 @@ def sub():
             }
     url = "https://proxy-provider-converter.geniucker.vercel.app"\
           "/api/convert?" + urlencode(urltem)
-    result = head + pp1 + url + pp2 + interval + pp3 + pg\
-                  + "rules:\n" + getFullRule()
+    result = head + pp.format(url, interval, url, interval, url, interval, url, interval)\
+                  + pg + "rules:\n" + getFullRule()
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
 

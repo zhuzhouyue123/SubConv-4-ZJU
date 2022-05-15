@@ -5,23 +5,22 @@ mode: Rule
 log-level: info
 external-controller: :9090
 """
-pp1 = """proxy-providers:
+pp = """proxy-providers:
   subscription:
     type: http
-    url: """
-pp2 = """
-    interval: """
-pp3 = """
-    path: ./subscription.yaml
+    url: {}
+    interval: {}
+    path: ./sub/subscription.yaml
     health-check:
       enable: true
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
   hk:
-    type: file
-    path: ./subscription.yaml
-    interval: 300
+    type: http
+    url: {}
+    interval: {}
+    path: ./sub/hk.yaml
     filter: '🇭🇰'
     health-check:
       enable: true
@@ -29,9 +28,10 @@ pp3 = """
       # lazy: true
       url: http://www.gstatic.com/generate_204
   sg:
-    type: file
-    path: ./subscription.yaml
-    interval: 300
+    type: http
+    url: {}
+    interval: {}
+    path: ./sub/sg.yaml
     filter: '🇸🇬'
     health-check:
       enable: true
@@ -39,9 +39,10 @@ pp3 = """
       # lazy: true
       url: http://www.gstatic.com/generate_204
   jp:
-    type: file
-    path: ./subscription.yaml
-    interval: 300
+    type: http
+    url: {}
+    interval: {}
+    path: ./sub/jp.yaml
     filter: '🇯🇵'
     health-check:
       enable: true
