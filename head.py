@@ -20,7 +20,7 @@ pp = """proxy-providers:
     type: http
     url: {}
     interval: {}
-    path: ./sub/hk.yaml
+    path: ./sub/subscription.yaml
     filter: '🇭🇰'
     health-check:
       enable: true
@@ -31,7 +31,7 @@ pp = """proxy-providers:
     type: http
     url: {}
     interval: {}
-    path: ./sub/sg.yaml
+    path: ./sub/subscription.yaml
     filter: '🇸🇬'
     health-check:
       enable: true
@@ -42,7 +42,7 @@ pp = """proxy-providers:
     type: http
     url: {}
     interval: {}
-    path: ./sub/jp.yaml
+    path: ./sub/subscription.yaml
     filter: '🇯🇵'
     health-check:
       enable: true
