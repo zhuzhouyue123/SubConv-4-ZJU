@@ -262,7 +262,7 @@ pg = """proxy-groups:
     tolerance: 50
     use:
       - jp
-  - name: 🇺🇲 美国节点
+  - name: 🇺🇸 美国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
