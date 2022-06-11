@@ -1,5 +1,4 @@
-head = """port: 7890
-socks-port: 7891
+head = """mixed-port: 7890
 allow-lan: true
 mode: Rule
 log-level: info
