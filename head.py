@@ -48,17 +48,6 @@ pp = """proxy-providers:
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
-  us:
-    type: http
-    url: {}
-    interval: {}
-    path: ./sub/subscription.yaml
-    filter: '🇺🇸'
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
 """
 pg = """proxy-groups:
   - name: 🚀 节点选择
@@ -266,8 +255,8 @@ pg = """proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
-      - us
+    proxies:
+      - DIRECT
   - name: 🇨🇳 台湾节点
     type: url-test
     url: http://www.gstatic.com/generate_204
