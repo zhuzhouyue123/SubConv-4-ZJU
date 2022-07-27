@@ -4,7 +4,10 @@ mode: Rule
 log-level: info
 external-controller: :9090
 """
-pp = """proxy-providers:
+pp = """
+proxies:
+
+proxy-providers:
   subscription:
     type: http
     url: {}
