@@ -32,7 +32,7 @@ def sub():
             "target": "clash",
             "url": url,
             }
-    url = "https://proxy-provider-converter.geniucker.vercel.app"\
+    url = "https://proxy-provider-converter.geniucker.top"\
           "/api/convert?" + urlencode(urltem)
     result = head\
         + pp.format(url, interval, url, interval, url, interval, url, interval, url, interval)\
