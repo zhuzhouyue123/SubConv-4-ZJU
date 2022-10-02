@@ -28,6 +28,7 @@ def getRule(sort, url):
 
 
 def getFullRule():
+    result = ""
     for i in ruleList:
         result += getRule(i[0], i[1])
     result += """ - GEOIP,CN,🎯 全球直连
