@@ -23,4 +23,5 @@ ruleList = [["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4
 ["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"],
 ["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"],
 ["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"],
-["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"]]
+["🎯 全球直连","https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list"],
+["🎯 全球直连","https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/direct.list"]]
