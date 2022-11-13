@@ -26,8 +26,9 @@ def sub():
     url = url.get("url")
     status_code = get(url).status_code
     if 200 != status_code:
+        pass
         # abort(status_code)
-        return status_code
+        # return
     urltem = {
             "target": "clash",
             "url": url,
