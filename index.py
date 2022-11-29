@@ -31,7 +31,7 @@ def sub():
         # return
     urltem = {
             "target": "clash",
-            "url": url,
+            "url": "https://sub.xeton.dev/sub?target=clash&url="+url+"&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini",
             }
     url = "https://proxy-provider-converter.geniucker.top"\
           "/api/convert?" + urlencode(urltem)
