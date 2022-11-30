@@ -40,14 +40,12 @@ def sub():
         + pg + "rules:\n" + getFullRule()
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
+
 @app.route("/test")
 def test():
-    url = request.args
-    url = url.get("url")
-    
-    UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 7_1_2 like Mac OS X) App leWebKit/537.51.2 (KHTML, like Gecko) Version/7.0 Mobile/11D257 Safari/9537.53"
-    headers={'User_Agent':UA}
-    return get(url, headers=headers).text
+    import cfscrape
+    scraper = cfscrape.create_scraper()
+    return scraper.get("http://somesite.com").content
 
 
 if __name__ == "__main__":
