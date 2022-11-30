@@ -49,7 +49,7 @@ def test():
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0'}
     Request = urllib.request.Request(url)
     r = urllib.request.urlopen(Request).read()
-    print(r.decode('utf-8'))
+    return r.decode('utf-8')
 
 
 if __name__ == "__main__":
