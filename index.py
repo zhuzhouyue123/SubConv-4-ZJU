@@ -44,8 +44,10 @@ def sub():
 @app.route("/test")
 def test():
     import cfscrape
+    url = request.args
+    url = url.get("url")
     scraper = cfscrape.create_scraper()
-    return scraper.get("http://somesite.com").content
+    return scraper.get(url).content
 
 
 if __name__ == "__main__":
