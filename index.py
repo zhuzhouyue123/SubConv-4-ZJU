@@ -53,6 +53,6 @@ def test():
 
 
 if __name__ == "__main__":
-    # app.run(host="0.0.0.0", port=221, debug=False)
-    server = pywsgi.WSGIServer(('0.0.0.0', 221), app)
-    server.serve_forever()
+    app.run(host="0.0.0.0", port=221, debug=True)
+    # server = pywsgi.WSGIServer(('0.0.0.0', 221), app)
+    # server.serve_forever()
