@@ -24,4 +24,6 @@ ruleList = [["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/
 ["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/ChinaDomain.list"],
 ["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/ChinaCompanyIp.list"],
 ["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Download.list"],
-["🎯 全球直连","https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/direct.list"]]
+["🎯 全球直连","https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/direct.list"],
+["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/ZJU.list"],
+["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"]]
