@@ -10,7 +10,7 @@ ruleList = [["🎯 全球直连","https://raw.githubusercontent.com/Mythologyli/
 ["📲 电报消息","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Telegram.list"],
 ["🎶 网易音乐","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/NetEaseMusic.list"],
 ["🎮 游戏平台","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/Epic.list"],
-["🎮 游戏平台","https://raw.githubusercontent.com/Mythologyli/ZJU-RuleR/master/Clash/Ruleset/Sony.list"],
+["🎮 游戏平台","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/Sony.list"],
 ["🎮 游戏平台","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/Steam.list"],
 ["📹 油管视频","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/YouTube.list"],
 ["🎥 奈飞视频","https://raw.githubusercontent.com/Mythologyli/ZJU-Rule/master/Clash/Ruleset/Netflix.list"],
