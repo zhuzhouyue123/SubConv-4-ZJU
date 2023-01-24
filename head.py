@@ -29,17 +29,6 @@ proxy-providers:
       interval: 600
       # lazy: true
       url: http://www.gstatic.com/generate_204
-  sg:
-    type: http
-    url: {}
-    interval: {}
-    path: ./sub/subscription.yaml
-    filter: '🇸🇬'
-    health-check:
-      enable: true
-      interval: 600
-      # lazy: true
-      url: http://www.gstatic.com/generate_204
   jp:
     type: http
     url: {}
@@ -273,7 +262,7 @@ pg = """proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - sg
+      - DIRECT
   - name: 🇰🇷 韩国节点
     type: url-test
     url: http://www.gstatic.com/generate_204
