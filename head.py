@@ -261,7 +261,7 @@ pg = """proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
-    use:
+    proxies:
       - DIRECT
   - name: 🇰🇷 韩国节点
     type: url-test
