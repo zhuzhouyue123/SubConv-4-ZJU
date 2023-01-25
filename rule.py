@@ -8,7 +8,7 @@ def getRule(sort, url):
     item = get(url).text
     item = item.split("\n")
     i = 0
-    while(i < len(item)):
+    while i < len(item):
         tem = item[i]
         if "" == tem or "#" == tem[0]\
                 or "USER-AGENT" in tem\
@@ -34,5 +34,3 @@ def getFullRule():
     result += """ - GEOIP,CN,🎯 全球直连
  - MATCH,🐟 漏网之鱼"""
     return result
-
-

@@ -1,6 +1,6 @@
 # coding=utf-8
-from head import head, pp, pg
-from base import getFullRule
+import snippet
+from rule import getFullRule
 from flask import Flask, request, abort, render_template
 from requests import get
 from urllib.parse import urlencode
@@ -35,9 +35,7 @@ def sub():
             }
     url = "https://proxy-provider-converter.geniucker.top"\
           "/api/convert?" + urlencode(urltem)
-    result = head\
-        + pp.format(url, interval, url, interval, url, interval, url, interval, url, interval)\
-        + pg + "rules:\n" + getFullRule()
+    result = snippet.pack(url, interval)
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
 
@@ -53,6 +51,6 @@ def test():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=221, debug=True)
-    # server = pywsgi.WSGIServer(('0.0.0.0', 221), app)
-    # server.serve_forever()
+    # app.run(host="0.0.0.0", port=221, debug=True)
+    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server.serve_forever()
