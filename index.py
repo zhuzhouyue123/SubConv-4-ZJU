@@ -1,5 +1,6 @@
 # coding=utf-8
 import snippet
+import indexhtml
 from rule import getFullRule
 from flask import Flask, request, abort, render_template
 from requests import get
@@ -12,7 +13,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return indexhtml.content.format(*((request.url_root,)*3))
 
 
 @app.route("/sub")
