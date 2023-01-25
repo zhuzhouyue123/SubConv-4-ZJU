@@ -24,5 +24,5 @@ content = """
 {}sub?url=<订阅链接>&interval=<时间间隔>
 ```
 
-<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="{{ url_for('static',filename='js/markdeep.min.js') }}" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<!-- Markdeep: --><style class="fallback">body{{visibility:hidden;white-space:pre;font-family:monospace}}</style><script src="{{{{ url_for('static',filename='js/markdeep.min.js') }}}}" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
 """
