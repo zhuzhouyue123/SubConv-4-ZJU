@@ -1,7 +1,7 @@
 # coding=utf-8
 import snippet
 import indexhtml
-from rule import getFullRule
+import os
 from flask import Flask, request, abort, render_template
 from requests import get
 from urllib.parse import urlencode
@@ -13,7 +13,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return indexhtml.content.format(*((request.url_root,)*3))
+    return indexhtml.content.format(*((request.url_root,)*3)), {'Content-Type': 'text/html;charset=utf-8'}
 
 
 @app.route("/sub")
@@ -34,8 +34,8 @@ def sub():
             "target": "clash",
             "url": url,
             }
-    url = "https://proxy-provider-converter.geniucker.top"\
-          "/api/convert?" + urlencode(urltem)
+    url = os.environ.get("provider_converter")\
+        + "/api/convert?" + urlencode(urltem)
     result = snippet.pack(url, interval)
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
