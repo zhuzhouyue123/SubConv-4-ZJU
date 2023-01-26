@@ -11,7 +11,7 @@ on:
       - main
     paths:
         - '*.list'
-        - '**.yml'
+        - '.github/workflows/**.yml'
 
 jobs:
   sync:
