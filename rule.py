@@ -1,12 +1,12 @@
 from ruleList import ruleList
 from re import search
-from requests import get
 
 
 def getRule(sort, url):
     result = ""
-    item = get(url).text
-    item = item.split("\n")
+    with open(url, encoding="utf-8") as myFile:
+        item = myFile.read()
+    item = item.split('\n')
     i = 0
     while i < len(item):
         tem = item[i]
@@ -21,9 +21,8 @@ def getRule(sort, url):
                 item[i] = tem2.group(1) + "," + sort + tem2.group(2)
             else:
                 item[i] += "," + sort
+            result += "  - " + item[i] + "\n"
         i += 1
-    for i in range(len(item)):
-        result += " - " + item[i] + "\n"
     return result
 
 
