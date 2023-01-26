@@ -37,16 +37,17 @@ jobs:
         git pull --recurse-submodules
         #update ZJU and general rules
         git submodule update --remote --recursive
+        echo "ZJU and general rules updated"
         #update custom rules
         a=$(git show origin/custom-rules:)
         b=${a:27}
         b=${b//${a:26:1}/ }
         while [ ${#b} -gt 0 ]; do
           n=$(expr match "$b" "[^ ]*");
-          echo ${b:0:n};
           git show origin/custom-rules:${b:0:n} > rules/custom-rules/${b:0:n}
           b=${b:n+1};
         done
+        echo "custom rules updated"
 
 
     - name: Commit update
@@ -54,4 +55,5 @@ jobs:
         git config --global user.name 'Git bot'
         git config --global user.email 'bot@noreply.github.com'
         git remote set-url origin https://x-access-token:${{ secrets.RELEASE_HUB_SECRET }}@github.com/${{ github.repository }}
+        git add -A
         git commit -am "Auto updated rules" && git push || echo "No changes to commit"
