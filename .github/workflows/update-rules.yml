@@ -11,7 +11,7 @@ on:
       - main
       - test
     paths:
-        - '**.list'
+        - '*.list'
         - '.github/workflows/**.yml'
 
 jobs:
@@ -35,8 +35,8 @@ jobs:
     # Update references
     - name: Git Sumbodule Update
       run: |
-        git checkout main
         git pull --recurse-submodules
+        git checkout main
         #update ZJU and general rules
         git submodule update --remote --recursive
         echo "ZJU and general rules updated"
