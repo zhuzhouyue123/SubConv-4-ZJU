@@ -28,7 +28,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        token: ${{ RELEASE_HUB_SECRET }}
+        token: ${{ secrets.RELEASE_HUB_SECRET }}
         submodules: true
 
     # Update references
@@ -41,5 +41,5 @@ jobs:
       run: |
         git config --global user.name 'Git bot'
         git config --global user.email 'bot@noreply.github.com'
-        git remote set-url origin https://x-access-token:${{ RELEASE_HUB_SECRET }}@github.com/${{ github.repository }}
+        git remote set-url origin https://x-access-token:${{ secrets.RELEASE_HUB_SECRET }}@github.com/${{ github.repository }}
         git commit -am "Auto updated submodule references" && git push || echo "No changes to commit"
