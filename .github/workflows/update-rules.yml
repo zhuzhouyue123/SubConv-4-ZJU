@@ -11,7 +11,7 @@ on:
       - main
       - test
     paths:
-        - '*.list'
+        - '**.list'
         - '.github/workflows/**.yml'
 
 jobs:
