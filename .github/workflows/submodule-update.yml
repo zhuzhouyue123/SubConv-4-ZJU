@@ -10,7 +10,7 @@ on:
       - custom-rules
       - main
     paths:
-        - '**.list'
+        - '*.list'
         - '**.yml'
 
 jobs:
