@@ -35,8 +35,19 @@ jobs:
     - name: Git Sumbodule Update
       run: |
         git pull --recurse-submodules
+        #update ZJU and general rules
         git submodule update --remote --recursive
-        git show origin/custom-rules:direct.list > rules/custom-rules/direct.list
+        #update custom rules
+        a=$(git show origin/custom-rules:)
+        b=${a:27}
+        b=${b//${a:26:1}/ }
+        while [ ${#b} -gt 0 ]; do
+          n=$(expr match "$b" "[^ ]*");
+          echo ${b:0:n};
+          git show origin/custom-rules:${b:0:n} > rules/custom-rules/${b:0:n}
+          b=${b:n+1};
+        done
+
 
     - name: Commit update
       run: |
