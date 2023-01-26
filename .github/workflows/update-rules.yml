@@ -35,6 +35,7 @@ jobs:
     # Update references
     - name: Git Sumbodule Update
       run: |
+        git checkout main
         git pull --recurse-submodules
         #update ZJU and general rules
         git submodule update --remote --recursive
