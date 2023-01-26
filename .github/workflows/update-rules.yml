@@ -46,7 +46,9 @@ jobs:
         b=${b//${a:26:1}/ }
         while [ ${#b} -gt 0 ]; do
           n=$(expr match "$b" "[^ ]*");
-          git show origin/custom-rules:${b:0:n} > rules/custom-rules/${b:0:n}
+          if ((${b:0:n}!=".github/")); then
+            git show origin/custom-rules:${b:0:n} > rules/custom-rules/${b:0:n};
+          fi
           b=${b:n+1};
         done
         echo "custom rules updated"
