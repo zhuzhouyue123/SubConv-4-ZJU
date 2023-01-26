@@ -6,9 +6,9 @@ name: Submodule Updates
 #############################
 on:
   push:
-    branches-ignore: [test]
+    branches: [custom-rules]
   pull_request:
-    branches: [main,custom-rules]
+    branches: [custom-rules]
   schedule:
     - cron: '0 16 1/10 * *'
 
