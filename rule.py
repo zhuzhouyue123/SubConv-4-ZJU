@@ -1,11 +1,11 @@
 from ruleList import ruleList
 from re import search
-from requests import get
 
 
 def getRule(sort, url):
     result = ""
-    item = get(url).text
+    with open(url) as myFile:
+        item = myFile.readlines()
     item = item.split("\n")
     i = 0
     while i < len(item):
