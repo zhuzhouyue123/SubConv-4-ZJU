@@ -1,10 +1,10 @@
-name: 'Submodules Sync'
+name: 'Update Rules'
 
 on:
   # Allows you to run this workflow manually from the Actions tab or through HTTP API
   workflow_dispatch:
   schedule:
-    - cron: "0 16 1/10 * *"
+    - cron: "0 16 1/7 * *"
   push:
     branches:
       - custom-rules
