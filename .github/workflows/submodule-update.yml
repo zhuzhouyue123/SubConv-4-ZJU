@@ -20,7 +20,7 @@ jobs:
     name: Submodule update
     runs-on: ubuntu-latest
     env:
-      PARENT_REPOSITORY: 'org/example-repository'
+      PARENT_REPOSITORY: 'geniucker/sub-conv'
       CHECKOUT_BRANCH: 'main'
       PR_AGAINST_BRANCH: 'main'
       OWNER: 'org'
