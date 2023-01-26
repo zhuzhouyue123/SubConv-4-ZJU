@@ -5,7 +5,7 @@ from re import search
 def getRule(sort, url):
     result = ""
     with open(url) as myFile:
-        item = myFile.readlines()
+        item = myFile.readall()
     item = item.split("\n")
     i = 0
     while i < len(item):
