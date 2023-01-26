@@ -36,6 +36,7 @@ jobs:
       run: |
         git pull --recurse-submodules
         git submodule update --remote --recursive
+        git show custom-rules:direct.list > rules/custom-rules/direct.list
 
     - name: Commit update
       run: |

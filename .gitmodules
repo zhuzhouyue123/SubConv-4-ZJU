@@ -1,7 +1,3 @@
 [submodule "rules/ZJU-Rule"]
 	path = rules/ZJU-Rule
 	url = https://github.com/Mythologyli/ZJU-Rule.git
-[submodule "rules/custom-rules"]
-	path = rules/custom-rules
-	url = https://github.com/Geniucker/sub-conv.git
-	branch = custom-rules
