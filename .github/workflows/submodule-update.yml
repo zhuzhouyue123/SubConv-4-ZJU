@@ -8,6 +8,10 @@ on:
   push:
     branches:
       - custom-rules
+      - main
+    paths:
+        - '**.list'
+        - '**.yml'
 
 jobs:
   sync:
