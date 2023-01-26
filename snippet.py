@@ -56,11 +56,13 @@ def pack(url, interval):
     regionGroups = regionGroups[:-1]
 
     result += head.HEAD
+    result += "\n"
 
     # proxy providers
     result += head.PROVIDER_HEAD.format(url, interval)
     for i in regionDict:
         result += head.PROVIDER_BASE.format(i, url, interval, regionDict[i][0])
+    result += "\n"
 
     result += head.PROXY_GROUP_HEAD
     # proxy select
@@ -85,6 +87,7 @@ def pack(url, interval):
     # region groups
     for i in regionDict:
         result += head.PROXY_GROUP_REGION_GROUPS.format(regionDict[i][1], i)
+    result += "\n"
 
     # ruls
     result += ("rules:\n" + rule.getFullRule())
