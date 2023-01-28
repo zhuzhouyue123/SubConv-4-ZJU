@@ -3,9 +3,9 @@ This module is to general a complete config for Clash
 """
 
 
-import snippet
-import rule
-import head
+from modules import snippet
+from modules import rule
+from modules import head
 
 
 def pack(url, interval):

@@ -5,8 +5,8 @@ This module is to get the list of regions available in orginal subscription
 
 import requests
 import re
-import head
-import rule
+from modules import head
+from modules import rule
 
 
 # lists groups

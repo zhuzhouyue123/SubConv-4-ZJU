@@ -3,7 +3,7 @@ This module get rules according to ruleList.py and composed them
 """
 
 
-from ruleList import ruleList
+from modules import ruleList
 from re import search
 
 
@@ -35,7 +35,7 @@ def getRule(sort, url):
 # pack all rules
 def getFullRule():
     result = ""
-    for i in ruleList:
+    for i in ruleList.ruleList:
         result += getRule(i[0], i[1])
     result += """  - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼"""

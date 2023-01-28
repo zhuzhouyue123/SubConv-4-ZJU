@@ -1,6 +1,6 @@
 # coding=utf-8
-import modules.pack as pack 
-import modules.indexhtml as indexhtml
+from modules import pack
+from modules import indexhtml
 import os
 from flask import Flask, request, abort
 from requests import get
