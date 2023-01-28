@@ -31,7 +31,7 @@ https://example.com/sub?url=<订阅链接>&interval=<时间间隔>
 ```
 
 ## 安全性问题
-本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的`snippet.py`相关代码和[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)的代码。  
+本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的`modules/snippet.py`相关代码和[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)的代码。  
 
 ## 致谢
 - [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)
