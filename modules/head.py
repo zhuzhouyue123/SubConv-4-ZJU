@@ -5,7 +5,7 @@ This module contains the components of the config of Clash
 
 HEAD = """mixed-port: 7890
 allow-lan: true
-mode: Rule
+mode: rule
 log-level: info
 external-controller: :9090
 """
