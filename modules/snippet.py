@@ -20,6 +20,8 @@ RULE_GROUP_LIST_PROXY_FIRST = [
         "🐟 漏网之鱼",
         ]
 RULE_GROUP_LIST_DIRECT_FIRST = [
+        "✔ ZJU",
+        "📃 ZJU More Scholar",
         "📺 哔哩哔哩",
         "🌏 国内媒体",
         "📢 谷歌FCM",

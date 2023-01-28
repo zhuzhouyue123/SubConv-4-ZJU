@@ -30,5 +30,5 @@ ruleList = [["🎯 全球直连","rules/ZJU-Rule/Clash/LocalAreaNetwork.list"],
 ["🎯 全球直连","rules/ZJU-Rule/Clash/ChinaCompanyIp.list"],
 ["🎯 全球直连","rules/ZJU-Rule/Clash/Download.list"],
 ["🎯 全球直连","rules/custom-rules/direct.list"],
-["🎯 全球直连","rules/ZJU-Rule/Clash/ZJU.list"],
-["🎯 全球直连","rules/ZJU-Rule/Clash/ZJU-More-Scholar.list"]]
+["✔ ZJU","rules/ZJU-Rule/Clash/ZJU.list"],
+["📃 ZJU More Scholar","rules/ZJU-Rule/Clash/ZJU-More-Scholar.list"]]
