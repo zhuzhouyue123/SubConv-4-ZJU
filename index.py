@@ -1,6 +1,6 @@
 # coding=utf-8
-import snippet
-import indexhtml
+import modules.pack as pack 
+import modules.indexhtml as indexhtml
 import os
 from flask import Flask, request, abort
 from requests import get
@@ -11,36 +11,36 @@ from gevent import pywsgi
 app = Flask(__name__)
 
 
+# mainpage as well as simple description
 @app.route("/")
 def index():
     return indexhtml.content.format(*((request.url_root,)*3)), {'Content-Type': 'text/html;charset=utf-8'}
 
 
+# api
 @app.route("/sub")
 def sub():
-    # return "Hello World!"
     url = request.args
+    # get interval
     if "interval" in url:
         interval = url["interval"]
     else:
         interval = "600"
+    # get the url of original subscription
     url = url.get("url")
-    status_code = get(url).status_code
-    if 200 != status_code:
-        pass
-        # abort(status_code)
-        # return
     urltem = {
-            "target": "clash",
-            "url": url,
-            }
+        "target": "clash",
+        "url": url,
+    }
     url = os.environ.get("provider_converter")\
         + "/api/convert?" + urlencode(urltem)
-    result = snippet.pack(url, interval)
+    result = pack.pack(url, interval)
     return result, {'Content-Type': 'text/yaml;charset=utf-8'}
 
 
 if __name__ == "__main__":
+    # Debug
     # app.run(host="0.0.0.0", port=221, debug=True)
+    # Production
     server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
     server.serve_forever()

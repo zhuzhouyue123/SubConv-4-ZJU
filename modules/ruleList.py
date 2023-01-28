@@ -1,3 +1,8 @@
+"""
+This module contains the list of sources of rules
+"""
+
+
 ruleList = [["🎯 全球直连","rules/ZJU-Rule/Clash/LocalAreaNetwork.list"],
 ["🎯 全球直连","rules/ZJU-Rule/Clash/UnBan.list"],
 ["🛑 广告拦截","rules/ZJU-Rule/Clash/BanAD.list"],

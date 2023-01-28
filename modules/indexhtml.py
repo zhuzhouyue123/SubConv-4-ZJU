@@ -1,3 +1,8 @@
+"""
+This module contains the html code of mainpage
+"""
+
+
 content = """
 <meta charset="utf-8">
 # 使用说明

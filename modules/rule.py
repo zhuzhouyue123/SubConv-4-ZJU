@@ -1,7 +1,13 @@
+"""
+This module get rules according to ruleList.py and composed them
+"""
+
+
 from ruleList import ruleList
 from re import search
 
 
+# pull rules from the url given
 def getRule(sort, url):
     result = ""
     with open(url, encoding="utf-8") as myFile:
@@ -26,6 +32,7 @@ def getRule(sort, url):
     return result
 
 
+# pack all rules
 def getFullRule():
     result = ""
     for i in ruleList:
