@@ -4,8 +4,8 @@ This module is to general a complete config for Clash
 
 
 from modules import snippet
-from modules import rule
 from modules import head
+import cache
 
 
 def pack(url, interval):
@@ -54,5 +54,5 @@ def pack(url, interval):
     result += "\n"
 
     # rules
-    result += ("rules:\n" + rule.getFullRule())
+    result += ("rules:\n" + cache.cache)
     return result

@@ -4,14 +4,14 @@ This module get rules according to ruleList.py and composed them
 
 
 from modules import ruleList
-from re import search
+import re
+import requests
 
 
 # pull rules from the url given
 def getRule(sort, url):
     result = ""
-    with open(url, encoding="utf-8") as myFile:
-        item = myFile.read()
+    item = requests.get(url).text
     item = item.split('\n')
     i = 0
     while i < len(item):
@@ -22,13 +22,14 @@ def getRule(sort, url):
             item.remove(tem)
             i -= 1
         else:
-            tem2 = search("(.+,.+)(,.+)", tem)
+            tem2 = re.search("(.+,.+)(,.+)", tem)
             if tem2 is not None:
                 item[i] = tem2.group(1) + "," + sort + tem2.group(2)
             else:
                 item[i] += "," + sort
             result += "  - " + item[i] + "\n"
         i += 1
+    print("Successfully cached", sort, url)
     return result
 
 

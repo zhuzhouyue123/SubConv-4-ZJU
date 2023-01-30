@@ -1,4 +1,4 @@
-name: 'Update Rules'
+name: 'make rule cache'
 
 on:
   # Allows you to run this workflow manually from the Actions tab or through HTTP API
@@ -15,7 +15,7 @@ on:
 
 jobs:
   sync:
-    name: 'Submodules Sync'
+    name: 'make rule cache'
     runs-on: ubuntu-latest
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
@@ -31,27 +31,18 @@ jobs:
         token: ${{ secrets.RELEASE_HUB_SECRET }}
         submodules: true
 
-    # Update references
-    - name: Git Sumbodule Update
-      run: |
-        git pull --recurse-submodules
-        git checkout main
-        #update ZJU and general rules
-        git submodule update --remote --recursive
-        echo "ZJU and general rules updated"
-        #update custom rules
-        a=$(git show origin/custom-rules:)
-        b=${a:27}
-        b=${b//${a:26:1}/ }
-        while [ ${#b} -gt 0 ]; do
-          n=$(expr match "$b" "[^ ]*");
-          if [ ${b:0:n} != ".github/" ]; then
-            git show origin/custom-rules:${b:0:n} > rules/custom-rules/${b:0:n};
-          fi
-          b=${b:n+1};
-        done
-        echo "custom rules updated"
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
 
+    - name: Setup Python dependencies
+      run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+    - name: Make Rule Cache
+      run: python mkcache.py
 
     - name: Commit update
       run: |
