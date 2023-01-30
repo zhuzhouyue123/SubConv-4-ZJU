@@ -42,7 +42,10 @@ jobs:
           pip install requests
 
     - name: Make Rule Cache
-      run: python mkcache.py
+      run: |
+          git pull
+          git checkout main
+          python mkcache.py
 
     - name: Commit update
       run: |
