@@ -1,3 +1,8 @@
+"""
+This file is a cache of rules from modules/ruleList.
+And it's automatically generalted by GitHub Action
+"""
+
 cache="""  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
