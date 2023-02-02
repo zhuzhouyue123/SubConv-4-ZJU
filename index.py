@@ -2,9 +2,10 @@
 from modules import pack
 from modules import indexhtml
 import os
+import re
 from flask import Flask, request, abort
 import requests
-from urllib.parse import urlencode
+from urllib.parse import urlencode, unquote
 from gevent import pywsgi
 
 
@@ -41,9 +42,11 @@ def sub():
         "target": "clash",
         "url": url,
     }
-    url = os.environ.get("provider_converter")\
+    providerConvUrl = os.environ.get("provider_converter")
+    domain = re.match(r"https?://(.+)", providerConvUrl).group(1)
+    urlAfterConv = providerConvUrl\
         + "/api/convert?" + urlencode(urltem)
-    result = pack.pack(url, interval)
+    result = pack.pack(urlAfterConv, interval, domain)
     return result, headers
 
 

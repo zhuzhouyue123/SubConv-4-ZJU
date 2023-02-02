@@ -40,7 +40,7 @@ RULE_GROUP_LIST_REJECT_FIRST = [
 REGION_DICT = {
         "HK": [r"HK|Hong|Kong|HGC|WTT|CMI|港", "🇭🇰 香港节点"],
         "TW": [r"TW|Taiwan|新北|彰化|CHT|台|HINET", "🇨🇳 台湾节点"],
-        "SG": [r"SG|Singapore|新加坡|狮城|新", "🇸🇬 狮城节点"],
+        "SG": [r"SG|Singapore|狮城|^新[^节北]|[^刷|更]新[^节北]", "🇸🇬 狮城节点"],
         "JP": [r"JP|Japan|Tokyo|Osaka|Saitama|日本|东京|大阪|埼玉|日", "🇯🇵 日本节点"],
         "KR": [r"KO?R|Korea|首尔|韩|韓", "🇰🇷 韩国节点"],
         "US": [r"US|America|United.*?States|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥", "🇺🇸 美国节点"]

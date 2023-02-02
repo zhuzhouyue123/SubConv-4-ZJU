@@ -8,7 +8,7 @@ from modules import head
 import cache
 
 
-def pack(url, interval):
+def pack(url, interval, domain):
     regionDict = snippet.mkList(url)  # regions available and corresponding group name
     result = ""
 
@@ -54,5 +54,5 @@ def pack(url, interval):
     result += "\n"
 
     # rules
-    result += ("rules:\n" + cache.cache)
+    result += ("rules:\n  - DOMAIN,{},DIRECT\n".format(domain) + cache.cache)
     return result
