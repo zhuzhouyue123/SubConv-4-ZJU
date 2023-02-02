@@ -29,11 +29,12 @@ def sub():
     # get the url of original subscription
     url = url.get("url")
 
+    # get original headers
     headers = {'Content-Type': 'text/yaml;charset=utf-8'}
     originalHeaders = requests.head(url, headers={'User-Agent':'clash'}).headers
-    if 'subscription-userinfo' in originalHeaders:
+    if 'subscription-userinfo' in originalHeaders:  # containing info about ramaining flow
         headers['subscription-userinfo'] = originalHeaders['subscription-userinfo']
-    if 'Content-Disposition' in originalHeaders:
+    if 'Content-Disposition' in originalHeaders:  # containing filename
         headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
 
     urltem = {
