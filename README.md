@@ -1,6 +1,10 @@
 # Subscription Converter
 （for ZJUers)
 这是一个Clash订阅转换接口
+## 功能
+- 大体基于 ACL 的规则（包括了ZJU专用规则）  
+- 基于 Provider 的节点自动更新  
+- 剩余流量和总流量的显示（需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
 ## 使用说明
 如需使用请自行部署（因为vercel每个人的用量是有限的，太多人用会挂），推荐部署在vercel，一是免费，二是规则缓存在仓库里，更新的时候Vercel会自动更新，如确实想部署到服务器，可以先看[Wiki](https://github.com/Geniucker/sub-conv/wiki)里部署到Vercel的教程，然后自行解决规则更新问题，当然你可以联系我问我一些注意事项  
 这一页只是简单说明，详细用法和**部署方法**请看[Wiki](https://github.com/Geniucker/sub-conv/wiki) (英文写的)  
@@ -31,7 +35,7 @@ https://example.com/sub?url=<订阅链接>&interval=<时间间隔>
 ```
 
 ## 安全性问题
-本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的`modules/snippet.py`相关代码和[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)的代码。  
+本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的相关代码和[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)的代码。  
 
 ## 致谢
 - [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)

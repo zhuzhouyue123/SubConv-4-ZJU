@@ -6,7 +6,7 @@ This module contains the html code of mainpage
 content = """
 <meta charset="utf-8">
 # 使用说明
-~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点<br>
+~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~理论上适配所有Clash机场，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点<br>
 本项目地址：<https://github.com/Geniucker/sub-conv><br>
 规则来源：<https://github.com/Mythologyli/ZJU-Rule>和<https://github.com/Geniucker/sub-conv/tree/custom-rules><br>
 具体规则参见`modules/ruleList.py`和`cache.py`文件<br>
