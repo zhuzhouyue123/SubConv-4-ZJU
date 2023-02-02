@@ -15737,6 +15737,8 @@ cache="""  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-KEYWORD,uiuc,🎯 全球直连
   - DOMAIN-KEYWORD,sso,🎯 全球直连
   - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
+  - DOMAIN, searxng.geniucker.top,🎯 全球直连
+  - DOMAIN, docker.hkcloud.geniucker.top,🎯 全球直连
   - DOMAIN-SUFFIX,zju.edu.cn,✔ ZJU
   - DOMAIN-KEYWORD,cc98,✔ ZJU
   - DOMAIN-KEYWORD,nexushd,✔ ZJU
