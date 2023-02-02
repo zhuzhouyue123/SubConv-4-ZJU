@@ -3,7 +3,7 @@ from modules import pack
 from modules import indexhtml
 import os
 from flask import Flask, request, abort
-from requests import get
+import requests
 from urllib.parse import urlencode
 from gevent import pywsgi
 
@@ -28,6 +28,14 @@ def sub():
         interval = "600"
     # get the url of original subscription
     url = url.get("url")
+
+    headers = {'Content-Type': 'text/yaml;charset=utf-8'}
+    originalHeaders = requests.head(url, headers={'User-Agent':'clash'}).headers
+    if 'subscription-userinfo' in originalHeaders:
+        headers['subscription-userinfo'] = originalHeaders['subscription-userinfo']
+    if 'Content-Disposition' in originalHeaders:
+        headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
+
     urltem = {
         "target": "clash",
         "url": url,
@@ -35,7 +43,7 @@ def sub():
     url = os.environ.get("provider_converter")\
         + "/api/convert?" + urlencode(urltem)
     result = pack.pack(url, interval)
-    return result, {'Content-Type': 'text/yaml;charset=utf-8'}
+    return result, headers
 
 
 if __name__ == "__main__":
