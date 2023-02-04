@@ -1,7 +1,7 @@
 # Subscription Converter
-（for ZJUers)
+(for ZJUers)
 这是一个Clash订阅转换接口  
-demo: <https://sub-converter.geniucker.top>
+demo: <https://sub-converter.geniucker.top>  
 如果是试用可以直接点进demo看用法  
 ## 功能
 - 大体基于 ACL 的规则（包括了ZJU专用规则）  
