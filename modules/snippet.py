@@ -5,11 +5,13 @@ This module is to get the list of regions available in orginal subscription
 
 import requests
 import re
-from modules import head
-from modules import rule
 
 
 # lists groups
+RULE_GROUP_LIST_ZJU = [
+        "✔ ZJU",
+        "📃 ZJU More Scholar",
+]
 RULE_GROUP_LIST_PROXY_FIRST = [
         "📲 电报消息",
         "📹 油管视频",
@@ -20,8 +22,6 @@ RULE_GROUP_LIST_PROXY_FIRST = [
         "🐟 漏网之鱼",
         ]
 RULE_GROUP_LIST_DIRECT_FIRST = [
-        "✔ ZJU",
-        "📃 ZJU More Scholar",
         "📺 哔哩哔哩",
         "🌏 国内媒体",
         "📢 谷歌FCM",

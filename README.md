@@ -4,6 +4,7 @@
 ## 功能
 - 大体基于 ACL 的规则（包括了ZJU专用规则）  
 - 基于 Provider 的节点自动更新  
+- 对[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)的支持  
 - 剩余流量和总流量的显示（需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
 ## 使用说明
 如需使用请自行部署（因为vercel每个人的用量是有限的，太多人用会挂），推荐部署在vercel，一是免费，二是规则缓存在仓库里，更新的时候Vercel会自动更新，如确实想部署到服务器，可以先看[Wiki](https://github.com/Geniucker/sub-conv/wiki)里部署到Vercel的教程，然后自行解决规则更新问题，当然你可以联系我问我一些注意事项  
@@ -23,15 +24,20 @@
   2. `interval`：（可选）值为自动拉取节点的时间间隔，单位为秒，若无此参数则默认为600  
     若是你一般一直把clash挂在后台（例如挂在软路由、NAS，或者长期挂后台），建议此项设置大一点，例如3600，以减小订阅服务器负载  
     若是一般只是短时间使用时打开clash，建议设置小一点，比如300或600，防止无法及时拉取节点
+  3. `zjuport'：（可选）值为[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)暴露的端口，若不使用则不填
 
 示例：  
-不指定时间间隔
+不指定时间间隔<br>
 ```
 https://example.com/sub?url=<订阅链接>
 ```
 指定时间间隔<br>
 ```
 https://example.com/sub?url=<订阅链接>&interval=<时间间隔>
+```
+使用[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)<br>
+```
+https://example.com/sub?url=<订阅链接>&zjuport=<端口>
 ```
 
 ## 安全性问题
