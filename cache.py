@@ -4,7 +4,7 @@ And it's automatically generalted by GitHub Action
 """
 
 cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
-  - DOMAIN-SUFFIX,rvpn,🎯 全球直连
+  - DOMAIN-KEYWORD,rvpn,🎯 全球直连
   - DOMAIN-KEYWORD,uiuc,🎯 全球直连
   - DOMAIN-KEYWORD,sso,🎯 全球直连
   - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
