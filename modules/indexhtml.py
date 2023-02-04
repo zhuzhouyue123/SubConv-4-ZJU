@@ -31,7 +31,7 @@ content = """
 ```
 使用[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)<br>
 ```
-https://example.com/sub?url=<订阅链接>&zjuport=<端口>
+{}sub?url=<订阅链接>&zjuport=<端口>
 ```
 
 <!-- Markdeep: --><style class="fallback">body{{visibility:hidden;white-space:pre;font-family:monospace}}</style><script src="/static/js/markdeep.min.js" charset="utf-8"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>

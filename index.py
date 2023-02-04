@@ -15,7 +15,7 @@ app = Flask(__name__)
 # mainpage as well as simple description
 @app.route("/")
 def index():
-    return indexhtml.content.format(*((request.url_root,)*3)), {'Content-Type': 'text/html;charset=utf-8'}
+    return indexhtml.content.format(*((request.url_root,)*4)), {'Content-Type': 'text/html;charset=utf-8'}
 
 
 # api
@@ -55,7 +55,7 @@ def sub():
 
 if __name__ == "__main__":
     # Debug
-    app.run(host="0.0.0.0", port=443, debug=True)
+    # app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    # server.serve_forever()
+    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server.serve_forever()
