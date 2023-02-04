@@ -4,6 +4,7 @@ And it's automatically generalted by GitHub Action
 """
 
 cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
+  - DOMAIN-SUFFIX,rvpn,🎯 全球直连
   - DOMAIN-KEYWORD,uiuc,🎯 全球直连
   - DOMAIN-KEYWORD,sso,🎯 全球直连
   - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
@@ -22,7 +23,6 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,zjueva.net,✔ ZJU
   - DOMAIN-SUFFIX,zjuqsc.com,✔ ZJU
   - IP-CIDR,10.0.0.0/8,✔ ZJU,no-resolve
-  - DOMAIN-KEYWORD,illinois,✔ ZJU
   - DOMAIN-SUFFIX,acm.org,✔ ZJU
   - DOMAIN-SUFFIX,cnki.net,✔ ZJU
   - DOMAIN-SUFFIX,gtadata.com,✔ ZJU
@@ -90,6 +90,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,plantcell.org,✔ ZJU
   - DOMAIN-SUFFIX,jamanetwork.com,✔ ZJU
   - DOMAIN-SUFFIX,nejm.org,✔ ZJU
+  - DOMAIN-KEYWORD,illinois,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,emerald.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,ieee.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,proquest.com,📃 ZJU More Scholar
