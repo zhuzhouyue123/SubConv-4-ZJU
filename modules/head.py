@@ -9,9 +9,17 @@ mode: rule
 log-level: info
 external-controller: :9090
 """
-PROVIDER_HEAD = """proxies:
 
-proxy-providers:
+PROXIES_HEAD = """proxies:
+"""
+ZJU_PROXY = """  - name: "ZJU内网"
+    type: socks5
+    server: localhost
+    port: {}
+
+"""
+
+PROVIDER_HEAD = """proxy-providers:
   subscription:
     type: http
     url: {}
@@ -77,6 +85,14 @@ PROXY_GROUP_PROXY_ANYCAST = """  - name: 🔮 负载均衡
     tolerance: 50
     use:
       - subscription
+"""
+PROXY_GROUP_ZJU = """  - name: {}
+    type: select
+    proxies:
+      - DIRECT{}
+      - 🚀 节点选择
+{}
+      - 🚀 手动切换
 """
 PROXY_GROUP_PROXY_FIRST = """  - name: {}
     type: select

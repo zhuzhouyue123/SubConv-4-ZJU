@@ -15,7 +15,7 @@ app = Flask(__name__)
 # mainpage as well as simple description
 @app.route("/")
 def index():
-    return indexhtml.content.format(*((request.url_root,)*3)), {'Content-Type': 'text/html;charset=utf-8'}
+    return indexhtml.content.format(*((request.url_root,)*4)), {'Content-Type': 'text/html;charset=utf-8'}
 
 
 # api
@@ -27,6 +27,9 @@ def sub():
         interval = url["interval"]
     else:
         interval = "600"
+    # get port of zju connect 
+    zjuPort = url.get("zjuport")
+
     # get the url of original subscription
     url = url.get("url")
 
@@ -46,13 +49,13 @@ def sub():
     domain = re.match(r"https?://(.+)", providerConvUrl).group(1)
     urlAfterConv = providerConvUrl\
         + "/api/convert?" + urlencode(urltem)
-    result = pack.pack(urlAfterConv, interval, domain)
+    result = pack.pack(urlAfterConv, interval, domain, zjuPort)
     return result, headers
 
 
 if __name__ == "__main__":
     # Debug
-    # app.run(host="0.0.0.0", port=221, debug=True)
+    # app.run(host="0.0.0.0", port=443, debug=True)
     # Production
     server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
     server.serve_forever()
