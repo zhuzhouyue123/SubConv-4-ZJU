@@ -3,7 +3,106 @@ This file is a cache of rules from modules/ruleList.
 And it's automatically generalted by GitHub Action
 """
 
-cache="""  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
+cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
+  - DOMAIN-KEYWORD,uiuc,🎯 全球直连
+  - DOMAIN-KEYWORD,sso,🎯 全球直连
+  - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
+  - DOMAIN-SUFFIX,duosecurity.com,🎯 全球直连
+  - DOMAIN,searxng.geniucker.top,🎯 全球直连
+  - DOMAIN,docker.hkcloud.geniucker.top,🎯 全球直连
+  - DST-PORT,22,🎯 全球直连
+  - DOMAIN-SUFFIX,zju.edu.cn,✔ ZJU
+  - DOMAIN-KEYWORD,cc98,✔ ZJU
+  - DOMAIN-KEYWORD,nexushd,✔ ZJU
+  - DOMAIN-SUFFIX,icsr.wiki,✔ ZJU
+  - DOMAIN-SUFFIX,zjusec.com,✔ ZJU
+  - DOMAIN-SUFFIX,zjusec.net,✔ ZJU
+  - DOMAIN-SUFFIX,zjusec.top,✔ ZJU
+  - DOMAIN-SUFFIX,zjusct.io,✔ ZJU
+  - DOMAIN-SUFFIX,zjueva.net,✔ ZJU
+  - DOMAIN-SUFFIX,zjuqsc.com,✔ ZJU
+  - IP-CIDR,10.0.0.0/8,✔ ZJU,no-resolve
+  - DOMAIN-KEYWORD,illinois,✔ ZJU
+  - DOMAIN-SUFFIX,acm.org,✔ ZJU
+  - DOMAIN-SUFFIX,cnki.net,✔ ZJU
+  - DOMAIN-SUFFIX,gtadata.com,✔ ZJU
+  - DOMAIN-SUFFIX,jstor.org,✔ ZJU
+  - DOMAIN-SUFFIX,webofscience.com,✔ ZJU
+  - DOMAIN-SUFFIX,inoteexpress.com,✔ ZJU
+  - DOMAIN-SUFFIX,pnas.org,✔ ZJU
+  - DOMAIN-SUFFIX,cnpereading.com,✔ ZJU
+  - DOMAIN-SUFFIX,sciencemag.org,✔ ZJU
+  - DOMAIN-SUFFIX,cas.org,✔ ZJU
+  - DOMAIN-SUFFIX,webofknowledge.com,✔ ZJU
+  - DOMAIN-SUFFIX,pkulaw.com,✔ ZJU
+  - DOMAIN-SUFFIX,sslibrary.com,✔ ZJU
+  - DOMAIN-SUFFIX,serialssolutions.com,✔ ZJU
+  - DOMAIN-SUFFIX,duxiu.com,✔ ZJU
+  - DOMAIN-SUFFIX,wanfangdata.com.cn,✔ ZJU
+  - DOMAIN-SUFFIX,koolearn.com,✔ ZJU
+  - DOMAIN-SUFFIX,cssci.nju.edu.cn,✔ ZJU
+  - DOMAIN-SUFFIX,science.org,✔ ZJU
+  - DOMAIN-SUFFIX,oup.com,✔ ZJU
+  - DOMAIN-SUFFIX,ajtmh.org,✔ ZJU
+  - DOMAIN-SUFFIX,futuremedicine.com,✔ ZJU
+  - DOMAIN-SUFFIX,tandfonline.com,✔ ZJU
+  - DOMAIN-SUFFIX,genetics.org,✔ ZJU
+  - DOMAIN-SUFFIX,healthaffairs.org,✔ ZJU
+  - DOMAIN-SUFFIX,rsna.org,✔ ZJU
+  - DOMAIN-SUFFIX,iospress.com,✔ ZJU
+  - DOMAIN-SUFFIX,allenpress.com,✔ ZJU
+  - DOMAIN-SUFFIX,asabe.org,✔ ZJU
+  - DOMAIN-SUFFIX,geoscienceworld.org,✔ ZJU
+  - DOMAIN-SUFFIX,sagepub.com,✔ ZJU
+  - DOMAIN-SUFFIX,ajnr.org,✔ ZJU
+  - DOMAIN-SUFFIX,ajhp.org,✔ ZJU
+  - DOMAIN-SUFFIX,annals.org,✔ ZJU
+  - DOMAIN-SUFFIX,esajournals.org,✔ ZJU
+  - DOMAIN-SUFFIX,informs.org,✔ ZJU
+  - DOMAIN-SUFFIX,cshlpress.com,✔ ZJU
+  - DOMAIN-SUFFIX,nrcresearchpress.cn,✔ ZJU
+  - DOMAIN-SUFFIX,royalsocietypublishing.org,✔ ZJU
+  - DOMAIN-SUFFIX,oxfordjournals.org,✔ ZJU
+  - DOMAIN-SUFFIX,aspbjournals.org,✔ ZJU
+  - DOMAIN-SUFFIX,sciencesocieties.org,✔ ZJU
+  - DOMAIN-SUFFIX,degruyter.com,✔ ZJU
+  - DOMAIN-SUFFIX,cshprotocols.org,✔ ZJU
+  - DOMAIN-SUFFIX,liebertonline.com,✔ ZJU
+  - DOMAIN-SUFFIX,polymerjournals.com,✔ ZJU
+  - DOMAIN-SUFFIX,csiro.au,✔ ZJU
+  - DOMAIN-SUFFIX,iop.org,✔ ZJU
+  - DOMAIN-SUFFIX,electrochem.org,✔ ZJU
+  - DOMAIN-SUFFIX,ametsoc.org,✔ ZJU
+  - DOMAIN-SUFFIX,portlandpress.com,✔ ZJU
+  - DOMAIN-SUFFIX,nrcresearchpress.com,✔ ZJU
+  - DOMAIN-SUFFIX,arabidopsis.org,✔ ZJU
+  - DOMAIN-SUFFIX,springerlink.com,✔ ZJU
+  - DOMAIN-SUFFIX,highwire.org,✔ ZJU
+  - DOMAIN-SUFFIX,ovid.com,✔ ZJU
+  - DOMAIN-SUFFIX,rsc.org,✔ ZJU
+  - DOMAIN-SUFFIX,bmj.org,✔ ZJU
+  - DOMAIN-SUFFIX,aip.org,✔ ZJU
+  - DOMAIN-SUFFIX,springer.com,✔ ZJU
+  - DOMAIN-SUFFIX,iwaponline.com,✔ ZJU
+  - DOMAIN-SUFFIX,rsnajnls.org,✔ ZJU
+  - DOMAIN-SUFFIX,karger.com,✔ ZJU
+  - DOMAIN-SUFFIX,wiley.com,✔ ZJU
+  - DOMAIN-SUFFIX,plantcell.org,✔ ZJU
+  - DOMAIN-SUFFIX,jamanetwork.com,✔ ZJU
+  - DOMAIN-SUFFIX,nejm.org,✔ ZJU
+  - DOMAIN-SUFFIX,emerald.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,ieee.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,proquest.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,sciencedirect.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,nature.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,acs.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,taylorfrancis.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,osapublishing.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,clarivate.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,gale.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
   - DOMAIN-SUFFIX,lan,🎯 全球直连
@@ -15733,104 +15832,5 @@ cache="""  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - PROCESS-NAME,DownloadService.exe,🎯 全球直连
   - PROCESS-NAME,Weiyun.exe,🎯 全球直连
   - PROCESS-NAME,baidunetdisk.exe,🎯 全球直连
-  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
-  - DOMAIN-KEYWORD,uiuc,🎯 全球直连
-  - DOMAIN-KEYWORD,sso,🎯 全球直连
-  - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
-  - DOMAIN-SUFFIX,duosecurity.com,🎯 全球直连
-  - DOMAIN,searxng.geniucker.top,🎯 全球直连
-  - DOMAIN,docker.hkcloud.geniucker.top,🎯 全球直连
-  - DST-PORT,22,🎯 全球直连
-  - DOMAIN-SUFFIX,zju.edu.cn,✔ ZJU
-  - DOMAIN-KEYWORD,cc98,✔ ZJU
-  - DOMAIN-KEYWORD,nexushd,✔ ZJU
-  - DOMAIN-SUFFIX,icsr.wiki,✔ ZJU
-  - DOMAIN-SUFFIX,zjusec.com,✔ ZJU
-  - DOMAIN-SUFFIX,zjusec.net,✔ ZJU
-  - DOMAIN-SUFFIX,zjusec.top,✔ ZJU
-  - DOMAIN-SUFFIX,zjusct.io,✔ ZJU
-  - DOMAIN-SUFFIX,zjueva.net,✔ ZJU
-  - DOMAIN-SUFFIX,zjuqsc.com,✔ ZJU
-  - IP-CIDR,10.0.0.0/8,✔ ZJU,no-resolve
-  - DOMAIN-KEYWORD,illinois,✔ ZJU
-  - DOMAIN-SUFFIX,acm.org,✔ ZJU
-  - DOMAIN-SUFFIX,cnki.net,✔ ZJU
-  - DOMAIN-SUFFIX,gtadata.com,✔ ZJU
-  - DOMAIN-SUFFIX,jstor.org,✔ ZJU
-  - DOMAIN-SUFFIX,webofscience.com,✔ ZJU
-  - DOMAIN-SUFFIX,inoteexpress.com,✔ ZJU
-  - DOMAIN-SUFFIX,pnas.org,✔ ZJU
-  - DOMAIN-SUFFIX,cnpereading.com,✔ ZJU
-  - DOMAIN-SUFFIX,sciencemag.org,✔ ZJU
-  - DOMAIN-SUFFIX,cas.org,✔ ZJU
-  - DOMAIN-SUFFIX,webofknowledge.com,✔ ZJU
-  - DOMAIN-SUFFIX,pkulaw.com,✔ ZJU
-  - DOMAIN-SUFFIX,sslibrary.com,✔ ZJU
-  - DOMAIN-SUFFIX,serialssolutions.com,✔ ZJU
-  - DOMAIN-SUFFIX,duxiu.com,✔ ZJU
-  - DOMAIN-SUFFIX,wanfangdata.com.cn,✔ ZJU
-  - DOMAIN-SUFFIX,koolearn.com,✔ ZJU
-  - DOMAIN-SUFFIX,cssci.nju.edu.cn,✔ ZJU
-  - DOMAIN-SUFFIX,science.org,✔ ZJU
-  - DOMAIN-SUFFIX,oup.com,✔ ZJU
-  - DOMAIN-SUFFIX,ajtmh.org,✔ ZJU
-  - DOMAIN-SUFFIX,futuremedicine.com,✔ ZJU
-  - DOMAIN-SUFFIX,tandfonline.com,✔ ZJU
-  - DOMAIN-SUFFIX,genetics.org,✔ ZJU
-  - DOMAIN-SUFFIX,healthaffairs.org,✔ ZJU
-  - DOMAIN-SUFFIX,rsna.org,✔ ZJU
-  - DOMAIN-SUFFIX,iospress.com,✔ ZJU
-  - DOMAIN-SUFFIX,allenpress.com,✔ ZJU
-  - DOMAIN-SUFFIX,asabe.org,✔ ZJU
-  - DOMAIN-SUFFIX,geoscienceworld.org,✔ ZJU
-  - DOMAIN-SUFFIX,sagepub.com,✔ ZJU
-  - DOMAIN-SUFFIX,ajnr.org,✔ ZJU
-  - DOMAIN-SUFFIX,ajhp.org,✔ ZJU
-  - DOMAIN-SUFFIX,annals.org,✔ ZJU
-  - DOMAIN-SUFFIX,esajournals.org,✔ ZJU
-  - DOMAIN-SUFFIX,informs.org,✔ ZJU
-  - DOMAIN-SUFFIX,cshlpress.com,✔ ZJU
-  - DOMAIN-SUFFIX,nrcresearchpress.cn,✔ ZJU
-  - DOMAIN-SUFFIX,royalsocietypublishing.org,✔ ZJU
-  - DOMAIN-SUFFIX,oxfordjournals.org,✔ ZJU
-  - DOMAIN-SUFFIX,aspbjournals.org,✔ ZJU
-  - DOMAIN-SUFFIX,sciencesocieties.org,✔ ZJU
-  - DOMAIN-SUFFIX,degruyter.com,✔ ZJU
-  - DOMAIN-SUFFIX,cshprotocols.org,✔ ZJU
-  - DOMAIN-SUFFIX,liebertonline.com,✔ ZJU
-  - DOMAIN-SUFFIX,polymerjournals.com,✔ ZJU
-  - DOMAIN-SUFFIX,csiro.au,✔ ZJU
-  - DOMAIN-SUFFIX,iop.org,✔ ZJU
-  - DOMAIN-SUFFIX,electrochem.org,✔ ZJU
-  - DOMAIN-SUFFIX,ametsoc.org,✔ ZJU
-  - DOMAIN-SUFFIX,portlandpress.com,✔ ZJU
-  - DOMAIN-SUFFIX,nrcresearchpress.com,✔ ZJU
-  - DOMAIN-SUFFIX,arabidopsis.org,✔ ZJU
-  - DOMAIN-SUFFIX,springerlink.com,✔ ZJU
-  - DOMAIN-SUFFIX,highwire.org,✔ ZJU
-  - DOMAIN-SUFFIX,ovid.com,✔ ZJU
-  - DOMAIN-SUFFIX,rsc.org,✔ ZJU
-  - DOMAIN-SUFFIX,bmj.org,✔ ZJU
-  - DOMAIN-SUFFIX,aip.org,✔ ZJU
-  - DOMAIN-SUFFIX,springer.com,✔ ZJU
-  - DOMAIN-SUFFIX,iwaponline.com,✔ ZJU
-  - DOMAIN-SUFFIX,rsnajnls.org,✔ ZJU
-  - DOMAIN-SUFFIX,karger.com,✔ ZJU
-  - DOMAIN-SUFFIX,wiley.com,✔ ZJU
-  - DOMAIN-SUFFIX,plantcell.org,✔ ZJU
-  - DOMAIN-SUFFIX,jamanetwork.com,✔ ZJU
-  - DOMAIN-SUFFIX,nejm.org,✔ ZJU
-  - DOMAIN-SUFFIX,emerald.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,ieee.org,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,proquest.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,sciencedirect.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,nature.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,acs.org,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,taylorfrancis.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,osapublishing.org,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,clarivate.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,gale.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼"""
