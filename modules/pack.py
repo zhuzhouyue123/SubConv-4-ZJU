@@ -8,7 +8,7 @@ from modules import head
 import cache
 
 
-def pack(url, interval, domain, zjuPort=None):
+def pack(url, interval, domain, zju):
     regionDict = snippet.mkList(url)  # regions available and corresponding group name
     result = ""
 
@@ -24,8 +24,12 @@ def pack(url, interval, domain, zjuPort=None):
 
     # proxies
     result += head.PROXIES_HEAD
-    if zjuPort:
-        result += head.ZJU_PROXY.format(zjuPort)
+    if zju["zjuPort"]:
+        result += head.ZJU_PROXY.format(
+            zju["zjuPort"],
+            ("\n    username: "+zju["zjuSocksUser"]) if zju["zjuSocksUser"] else "",
+            ("\n    password: "+zju["zjuSocksPasswd"]) if zju["zjuSocksPasswd"] else ""
+        )
 
     # proxy providers
     result += head.PROVIDER_HEAD.format(url, interval)
@@ -48,7 +52,7 @@ def pack(url, interval, domain, zjuPort=None):
     for i in snippet.RULE_GROUP_LIST_ZJU:
         result += head.PROXY_GROUP_ZJU.format(
             i,
-            "\n      - ZJU内网" if zjuPort else "",
+            "\n      - ZJU内网" if zju["zjuPort"] else "",
             regionGroups
         )
     # add proxy first groups

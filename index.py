@@ -28,7 +28,11 @@ def sub():
     else:
         interval = "600"
     # get port of zju connect 
-    zjuPort = url.get("zjuport")
+    zju = {
+        "zjuPort": url.get("zjuport"),
+        "zjuSocksUser": url.get("zjusocksuser"),
+        "zjuSocksPasswd": url.get("zjusockspasswd")
+    }
 
     # get the url of original subscription
     url = url.get("url")
@@ -49,13 +53,13 @@ def sub():
     domain = re.match(r"https?://(.+)", providerConvUrl).group(1)
     urlAfterConv = providerConvUrl\
         + "/api/convert?" + urlencode(urltem)
-    result = pack.pack(urlAfterConv, interval, domain, zjuPort)
+    result = pack.pack(urlAfterConv, interval, domain, zju)
     return result, headers
 
 
 if __name__ == "__main__":
     # Debug
-    # app.run(host="0.0.0.0", port=443, debug=True)
+    app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    server.serve_forever()
+    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    # server.serve_forever()

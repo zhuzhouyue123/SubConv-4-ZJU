@@ -15,7 +15,7 @@ PROXIES_HEAD = """proxies:
 ZJU_PROXY = """  - name: "ZJU内网"
     type: socks5
     server: localhost
-    port: {}
+    port: {}{}{}
 
 """
 
