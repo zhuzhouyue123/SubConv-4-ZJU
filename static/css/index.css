@@ -58,3 +58,16 @@ button {
 button:hover {
 	background-color: #474747;
 }
+
+.footer {
+	text-align: center;
+}
+.footer a {
+	text-decoration: none;
+	position: relative;
+	color: #777777;
+}
+.footer a:hover {
+	text-decoration: underline;
+	color:#474747;
+}

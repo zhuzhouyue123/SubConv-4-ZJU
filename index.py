@@ -3,7 +3,7 @@ from modules import pack
 from modules import indexhtml
 import os
 import re
-from flask import Flask, request, abort
+from flask import Flask, request, render_template 
 import requests
 from urllib.parse import urlencode, unquote
 from gevent import pywsgi
@@ -15,7 +15,7 @@ app = Flask(__name__)
 # mainpage as well as simple description
 @app.route("/")
 def index():
-    return indexhtml.content.format(*((request.url_root,)*4)), {'Content-Type': 'text/html;charset=utf-8'}
+    return render_template("index.html")
 
 
 # api
