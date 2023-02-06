@@ -10,7 +10,7 @@ window.onload = function () {
 	output.value = ""
 
 	btn.onclick = function () {
-		var result = window.location.protocal + "//" + window.location.host;
+		var result = window.location.protocol + "//" + window.location.host;
 		if (url.value != "") {
 			result += "/sub?url=" + url.value;
 		}
