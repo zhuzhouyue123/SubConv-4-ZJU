@@ -10,7 +10,7 @@ window.onload = function () {
 	output.value = ""
 
 	btn.onclick = function () {
-		var result = window.location.host;
+		var result = window.location.protocal + "//" + window.location.host;
 		if (url.value != "") {
 			result += "/sub?url=" + url.value;
 		}
@@ -29,7 +29,7 @@ window.onload = function () {
 		}
 		if (socksPort.value != "") {
 			if (/^[1-9][0-9]*$/.test(socksPort.value) && 1 <= socksPort.value && socksPort.value <= 65535) {
-				result += "&zjusocksport=" + socksPort.value;
+				result += "&zjuport=" + socksPort.value;
 			}
 			else {
 				output.value = "你输入的端口号不是1~65535的整数";
