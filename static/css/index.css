@@ -62,12 +62,12 @@ button:hover {
 .footer {
 	text-align: center;
 }
-.footer a {
+a {
 	text-decoration: none;
 	position: relative;
 	color: #777777;
 }
-.footer a:hover {
+a:hover {
 	text-decoration: underline;
 	color:#474747;
 }
