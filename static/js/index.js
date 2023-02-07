@@ -9,6 +9,12 @@ window.onload = function () {
 	var copy = document.getElementById("copy");
 	var link2 = document.getElementById("link2");
 	output.value = ""
+	if (socksPort.value != "") {
+		link2.style.display = "unset";
+	}
+	else {
+		link2.style.display = "none";
+	}
 
 	socksPort.oninput = function () {
 		if (socksPort.value != "") {
