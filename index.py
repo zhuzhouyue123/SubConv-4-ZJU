@@ -58,7 +58,7 @@ def sub():
 
 if __name__ == "__main__":
     # Debug
-    app.run(host="0.0.0.0", port=443, debug=True)
+    # app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    # server.serve_forever()
+    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server.serve_forever()

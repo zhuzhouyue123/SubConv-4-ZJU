@@ -8,7 +8,8 @@ window.onload = function () {
 	var output = document.getElementById("output");
 	var copy = document.getElementById("copy");
 	var link2 = document.getElementById("link2");
-	output.value = ""
+	output.value = "";
+	
 	if (socksPort.value != "") {
 		link2.style.display = "unset";
 	}
