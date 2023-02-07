@@ -7,8 +7,17 @@ window.onload = function () {
 	var btn = document.getElementById("btn");
 	var output = document.getElementById("output");
 	var copy = document.getElementById("copy");
+	var link2 = document.getElementById("link2");
 	output.value = ""
 
+	socksPort.oninput = function () {
+		if (socksPort.value != "") {
+			link2.style.display = "unset";
+		}
+		else {
+			link2.style.display = "none";
+		}
+	}
 	btn.onclick = function () {
 		var result = window.location.protocol + "//" + window.location.host;
 		if (url.value != "") {

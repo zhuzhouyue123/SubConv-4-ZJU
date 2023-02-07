@@ -1,6 +1,5 @@
 # coding=utf-8
 from modules import pack
-from modules import indexhtml
 import os
 import re
 from flask import Flask, request, render_template 

@@ -22,7 +22,7 @@
 				</div>
 				<br>
 				<div class="link1" style="width: 6000px">
-					本地 ZJU Connect 支持(不使用全部留空)
+					本地 ZJU Connect 支持(不使用则留空)
 				</div>
 			</div>
 			<div id="another">
@@ -30,13 +30,15 @@
 					ZJU暴露的 socks 5 端口:
 					<input type="text" style="width: 80px" id="inp-socksPort" />
 				</div>
-				<div class="link1">
-					socks 5 用户名:
-					<input type="text" style="width: 100px" id="inp-socksUsername" /> (未设置则留空)
-				</div>
-				<div class="link1">
-					socks 5 の密码:
-					<input type="text" style="width: 100px" id="inp-socksPassword" /> (未设置则留空)
+				<div id="link2" style="display: none;">
+					<div class="link1">
+						socks 5 用户名:
+						<input type="text" style="width: 100px" id="inp-socksUsername" /> (未设置则留空)
+					</div>
+					<div class="link1">
+						socks 5 の密码:
+						<input type="text" style="width: 100px" id="inp-socksPassword" /> (未设置则留空)
+					</div>
 				</div>
 			</div>
 			<div class="link1"><button id="btn">生成</button></div>
