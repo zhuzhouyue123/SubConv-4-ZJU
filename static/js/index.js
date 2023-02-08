@@ -28,7 +28,7 @@ window.onload = function () {
 	btn.onclick = function () {
 		var result = window.location.protocol + "//" + window.location.host;
 		if (url.value != "") {
-			result += "/sub?url=" + url.value;
+			result += "/sub?url=" + encodeURIComponent(url.value);
 		}
 		else {
 			output.value = "订阅链接不能为空哦"
