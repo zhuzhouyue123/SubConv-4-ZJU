@@ -103,6 +103,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,gale.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,openai.com,🤖 OpenAI
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
