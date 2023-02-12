@@ -11,6 +11,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,duosecurity.com,🎯 全球直连
   - DOMAIN,searxng.geniucker.top,🎯 全球直连
   - DOMAIN,docker.hkcloud.geniucker.top,🎯 全球直连
+  - DOMAIN,room.geniucker.top,🎯 全球直连
   - DST-PORT,22,🎯 全球直连
   - DOMAIN-SUFFIX,zju.edu.cn,✔ ZJU
   - DOMAIN-KEYWORD,cc98,✔ ZJU
@@ -90,6 +91,8 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,plantcell.org,✔ ZJU
   - DOMAIN-SUFFIX,jamanetwork.com,✔ ZJU
   - DOMAIN-SUFFIX,nejm.org,✔ ZJU
+  - DOMAIN-SUFFIX,icevirtuallibrary.com,✔ ZJU
+  - DOMAIN-SUFFIX,cdnsciencepub.com,✔ ZJU
   - DOMAIN-KEYWORD,illinois,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,emerald.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,ieee.org,📃 ZJU More Scholar
@@ -103,6 +106,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,gale.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,ascelibrary.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,openai.com,🤖 OpenAI
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
