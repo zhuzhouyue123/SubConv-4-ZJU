@@ -27,7 +27,7 @@ PROVIDER_HEAD = """proxy-providers:
     path: ./sub/subscription.yaml
     health-check:
       enable: true
-      interval: 600
+      interval: 300
       # lazy: true
       url: http://www.gstatic.com/generate_204
 """
@@ -39,7 +39,7 @@ PROVIDER_BASE = """  {}:
     filter: "{}"
     health-check:
       enable: true
-      interval: 600
+      interval: 300
       # lazy: true
       url: http://www.gstatic.com/generate_204
 """
