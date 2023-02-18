@@ -26,7 +26,7 @@ def pack(url, interval, domain, zju):
     result += head.PROXIES_HEAD
     if zju["zjuPort"]:
         result += head.ZJU_PROXY.format(
-            zju["zjuAddr"] if zju["Addr"] else "localhost",
+            zju["zjuAddr"] if zju["zjuAddr"] else "localhost",
             zju["zjuPort"],
             ("\n    username: "+zju["zjuSocksUser"]) if zju["zjuSocksUser"] else "",
             ("\n    password: "+zju["zjuSocksPasswd"]) if zju["zjuSocksPasswd"] else ""
