@@ -14,7 +14,7 @@ PROXIES_HEAD = """proxies:
 """
 ZJU_PROXY = """  - name: "ZJU内网"
     type: socks5
-    server: localhost
+    server: {} 
     port: {}{}{}
 
 """
@@ -50,6 +50,7 @@ PROXY_GROUP_PROXY_SELECT = """  - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
+      - ♻️ 常见地区自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
 {}
@@ -68,6 +69,14 @@ PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
     tolerance: 50
     use:
       - subscription
+"""
+PROXY_GROUP_PROXY_COMMON_AUTO_SELECT = """  - name: ♻️ 常见地区自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    use:
+{}
 """
 PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
     type: fallback

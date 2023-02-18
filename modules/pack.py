@@ -26,6 +26,7 @@ def pack(url, interval, domain, zju):
     result += head.PROXIES_HEAD
     if zju["zjuPort"]:
         result += head.ZJU_PROXY.format(
+            zju["zjuAddr"] if zju["Addr"] else "localhost",
             zju["zjuPort"],
             ("\n    username: "+zju["zjuSocksUser"]) if zju["zjuSocksUser"] else "",
             ("\n    password: "+zju["zjuSocksPasswd"]) if zju["zjuSocksPasswd"] else ""
@@ -44,6 +45,8 @@ def pack(url, interval, domain, zju):
     result += head.PROXY_GROUP_PROXY_MANUAL_SELECT
     # add auto select
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT
+    # add common auto select
+    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.fomat(regionGroups)
     # add fallback
     result += head.PROXY_GROUP_PROXY_FALLBACK
     # add anycast

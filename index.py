@@ -30,7 +30,8 @@ def sub():
     zju = {
         "zjuPort": url.get("zjuport"),
         "zjuSocksUser": url.get("zjusocksuser"),
-        "zjuSocksPasswd": url.get("zjusockspasswd")
+        "zjuSocksPasswd": url.get("zjusockspasswd"),
+        "zjuAddr": url.get("zjuaddr")
     }
 
     # get the url of original subscription
