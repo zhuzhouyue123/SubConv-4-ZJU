@@ -16,7 +16,7 @@ def pack(url, interval, domain, zju):
     regionGroups = ""
     for i in regionDict.values():
         regionGroups += "      - " + i[1] + "\n"
-    regionGroups = regionGroups[:-1]
+    # regionGroups = regionGroups[:-1]
 
     # head of config
     result += head.HEAD
@@ -46,7 +46,10 @@ def pack(url, interval, domain, zju):
     # add auto select
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT
     # add common auto select
-    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.format(regionGroups)
+    tmp = ""
+    for i in regionDict.values():
+        tmp += "      - " + i[0] + "\n"
+    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.format(tmp)
     # add fallback
     result += head.PROXY_GROUP_PROXY_FALLBACK
     # add anycast
