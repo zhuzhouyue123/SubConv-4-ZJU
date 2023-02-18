@@ -46,7 +46,7 @@ def pack(url, interval, domain, zju):
     # add auto select
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT
     # add common auto select
-    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.fomat(regionGroups)
+    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.format(regionGroups)
     # add fallback
     result += head.PROXY_GROUP_PROXY_FALLBACK
     # add anycast
