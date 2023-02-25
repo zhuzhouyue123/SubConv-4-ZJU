@@ -37,7 +37,7 @@ def pack(url: list, interval, domain, zju):
     for u in range(len(url)):
         result += head.PROVIDER_BASE0.format(u, url[u], interval, u)
         for i in regionDict[u]:
-            result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
+            result += head.PROVIDER_BASE1.format(i+str(u), interval, str(u), regionDict[u][i][0])
     result += "\n"
 
     result += head.PROXY_GROUP_HEAD

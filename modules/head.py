@@ -32,8 +32,7 @@ PROVIDER_BASE0 = """  subscription{}:
       url: http://www.gstatic.com/generate_204
 """
 PROVIDER_BASE1 = """  {}:
-    type: http
-    url: {}
+    type: file 
     interval: {}
     path: ./sub/subscription{}.yaml
     filter: "{}"
