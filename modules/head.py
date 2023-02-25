@@ -19,23 +19,23 @@ ZJU_PROXY = """  - name: "ZJU内网"
 
 """
 
-PROVIDER_HEAD = """proxy-providers:
-  subscription:
+PROVIDER_HEAD = "proxy-providers:\n"
+PROVIDER_BASE0 = """  subscription{}:
     type: http
     url: {}
     interval: {}
-    path: ./sub/subscription.yaml
+    path: ./sub/subscription{}.yaml
     health-check:
       enable: true
       interval: 300
       # lazy: true
       url: http://www.gstatic.com/generate_204
 """
-PROVIDER_BASE = """  {}:
+PROVIDER_BASE1 = """  {}:
     type: http
     url: {}
     interval: {}
-    path: ./sub/subscription.yaml
+    path: ./sub/subscription{}.yaml
     filter: "{}"
     health-check:
       enable: true
@@ -60,7 +60,7 @@ PROXY_GROUP_PROXY_SELECT = """  - name: 🚀 节点选择
 PROXY_GROUP_PROXY_MANUAL_SELECT = """  - name: 🚀 手动切换
     type: select
     use:
-      - subscription
+{}
 """
 PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
     type: url-test
@@ -68,7 +68,7 @@ PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
     interval: 300
     tolerance: 50
     use:
-      - subscription
+{}
 """
 PROXY_GROUP_PROXY_COMMON_AUTO_SELECT = """  - name: ♻️ 常见地区自动选择
     type: url-test
@@ -84,7 +84,7 @@ PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
     interval: 300
     tolerance: 50
     use:
-      - subscription
+{}
 """
 PROXY_GROUP_PROXY_ANYCAST = """  - name: 🔮 负载均衡
     type: load-balance
@@ -93,7 +93,7 @@ PROXY_GROUP_PROXY_ANYCAST = """  - name: 🔮 负载均衡
     interval: 300
     tolerance: 50
     use:
-      - subscription
+{}
 """
 PROXY_GROUP_ZJU = """  - name: {}
     type: select
@@ -131,5 +131,5 @@ PROXY_GROUP_REGION_GROUPS = """  - name: {}
     interval: 300
     tolerance: 50
     use:
-      - {}
+{}
 """

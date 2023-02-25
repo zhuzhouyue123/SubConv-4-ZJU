@@ -8,13 +8,13 @@ from modules import head
 import cache
 
 
-def pack(url, interval, domain, zju):
-    regionDict = snippet.mkList(url)  # regions available and corresponding group name
+def pack(url: list, interval, domain, zju):
+    regionDict, total = snippet.mkList(url)  # regions available and corresponding group name
     result = ""
 
     # create a snippet containing region groups
     regionGroups = ""
-    for i in regionDict.values():
+    for i in total.values():
         regionGroups += "      - " + i[1] + "\n"
     regionGroups = regionGroups[:-1]
 
@@ -33,28 +33,35 @@ def pack(url, interval, domain, zju):
         )
 
     # proxy providers
-    result += head.PROVIDER_HEAD.format(url, interval)
-    for i in regionDict:
-        result += head.PROVIDER_BASE.format(i, url, interval, regionDict[i][0])
+    result += head.PROVIDER_HEAD
+    for u in range(len(url)):
+        result += head.PROVIDER_BASE0.format(u, url[u], interval, u)
+        for i in regionDict[u]:
+            result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
     result += "\n"
 
     result += head.PROXY_GROUP_HEAD
     # add proxy select
     result += head.PROXY_GROUP_PROXY_SELECT.format(regionGroups)
     # add manual select
-    result += head.PROXY_GROUP_PROXY_MANUAL_SELECT
+    subscriptions = ""
+    for u in range(len(url)):
+        subscriptions += "      - subscription" + str(u) + "\n"
+    subscriptions = subscriptions[:-1]
+    result += head.PROXY_GROUP_PROXY_MANUAL_SELECT.format(subscriptions)
     # add auto select
-    result += head.PROXY_GROUP_PROXY_AUTO_SELECT
+    result += head.PROXY_GROUP_PROXY_AUTO_SELECT.format(subscriptions)
     # add common auto select
     tmp = ""
-    for i in regionDict.keys():
-        tmp += "      - " + i + "\n"
+    for i in range(len(regionDict)):
+        for j in regionDict[i]:
+            tmp += "      - " + j + str(i) + "\n"
     tmp = tmp[:-1]
     result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.format(tmp)
     # add fallback
-    result += head.PROXY_GROUP_PROXY_FALLBACK
+    result += head.PROXY_GROUP_PROXY_FALLBACK.format(subscriptions)
     # add anycast
-    result += head.PROXY_GROUP_PROXY_ANYCAST
+    result += head.PROXY_GROUP_PROXY_ANYCAST.format(subscriptions)
     # add zju groups
     for i in snippet.RULE_GROUP_LIST_ZJU:
         result += head.PROXY_GROUP_ZJU.format(
@@ -72,8 +79,13 @@ def pack(url, interval, domain, zju):
     for i in snippet.RULE_GROUP_LIST_REJECT_FIRST:
         result += head.PROXY_GROUP_REJECT_FIRST.format(i)
     # add region groups
-    for i in regionDict:
-        result += head.PROXY_GROUP_REGION_GROUPS.format(regionDict[i][1], i)
+    for i in total:
+        tmp = ""
+        for u in range(len(url)):
+            if i in regionDict[u]:
+                tmp += "      - " + i + str(u) + "\n"
+        tmp = tmp[:-1]
+        result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], tmp)
     result += "\n"
 
     # rules

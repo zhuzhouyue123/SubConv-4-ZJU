@@ -50,9 +50,14 @@ REGION_DICT = {
 
 # create a dict containg resions and corresponding proxy group
 def mkList(url):
-    result = {}
-    content = requests.get(url).text
-    for i in REGION_DICT:
-        if re.search(REGION_DICT[i][0], content, re.I) is not None:
-            result[i] = REGION_DICT[i]
-    return result
+    result = []
+    total = {}
+    for u in url:
+        tmp = {}
+        content = requests.get(u).text
+        for i in REGION_DICT:
+            if re.search(REGION_DICT[i][0], content, re.I) is not None:
+                tmp[i] = REGION_DICT[i]
+                total[i] = REGION_DICT[i]
+        result.append(tmp)
+    return result, total

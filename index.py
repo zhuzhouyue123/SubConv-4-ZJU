@@ -36,30 +36,36 @@ def sub():
 
     # get the url of original subscription
     url = url.get("url")
+    url = re.split(r"[|\n]", url)
+    # remove empty lines
+    url = list(filter(lambda x: x!="", url)) 
 
     # get original headers
     headers = {'Content-Type': 'text/yaml;charset=utf-8'}
-    originalHeaders = requests.head(url, headers={'User-Agent':'clash'}).headers
-    if 'subscription-userinfo' in originalHeaders:  # containing info about ramaining flow
-        headers['subscription-userinfo'] = originalHeaders['subscription-userinfo']
-    if 'Content-Disposition' in originalHeaders:  # containing filename
-        headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
+    # if there's only one subscription, return userinfo
+    if len(url) == 1:
+        originalHeaders = requests.head(url[0], headers={'User-Agent':'clash'}).headers
+        if 'subscription-userinfo' in originalHeaders:  # containing info about ramaining flow
+            headers['subscription-userinfo'] = originalHeaders['subscription-userinfo']
+        if 'Content-Disposition' in originalHeaders:  # containing filename
+            headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
 
-    urltem = {
-        "target": "clash",
-        "url": url,
-    }
+    urltem = []
+    for i in url:
+        urltem.append({"target": "clash", "url": i}
+    )
     providerConvUrl = os.environ.get("provider_converter")
     domain = re.match(r"https?://(.+)", providerConvUrl).group(1)
-    urlAfterConv = providerConvUrl\
-        + "/api/convert?" + urlencode(urltem)
+    urlAfterConv = []
+    for i in urltem:
+        urlAfterConv.append(providerConvUrl + "/api/convert?" + urlencode(i))
     result = pack.pack(urlAfterConv, interval, domain, zju)
     return result, headers
 
 
 if __name__ == "__main__":
     # Debug
-    # app.run(host="0.0.0.0", port=443, debug=True)
+    app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    server.serve_forever()
+    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    # server.serve_forever()
