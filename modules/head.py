@@ -27,7 +27,7 @@ PROVIDER_BASE0 = """  subscription{}:
     path: ./sub/subscription{}.yaml
     health-check:
       enable: true
-      interval: 300
+      interval: 30
       # lazy: true
       url: http://www.gstatic.com/generate_204
 """
@@ -39,7 +39,7 @@ PROVIDER_BASE1 = """  {}:
     filter: "{}"
     health-check:
       enable: true
-      interval: 300
+      interval: 30
       # lazy: true
       url: http://www.gstatic.com/generate_204
 """
@@ -65,7 +65,7 @@ PROXY_GROUP_PROXY_MANUAL_SELECT = """  - name: 🚀 手动切换
 PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 30
     tolerance: 50
     use:
 {}
@@ -73,7 +73,7 @@ PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
 PROXY_GROUP_PROXY_COMMON_AUTO_SELECT = """  - name: ♻️ 常见地区自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 30
     tolerance: 50
     use:
 {}
@@ -81,7 +81,7 @@ PROXY_GROUP_PROXY_COMMON_AUTO_SELECT = """  - name: ♻️ 常见地区自动选
 PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 30
     tolerance: 50
     use:
 {}
@@ -90,7 +90,7 @@ PROXY_GROUP_PROXY_ANYCAST = """  - name: 🔮 负载均衡
     type: load-balance
     strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 30
     tolerance: 50
     use:
 {}
@@ -128,7 +128,7 @@ PROXY_GROUP_REJECT_FIRST = """  - name: {}
 PROXY_GROUP_REGION_GROUPS = """  - name: {}
     type: url-test
     url: http://www.gstatic.com/generate_204
-    interval: 300
+    interval: 30
     tolerance: 50
     use:
 {}
