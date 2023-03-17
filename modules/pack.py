@@ -8,7 +8,7 @@ from modules import head
 import cache
 
 
-def pack(url: list, interval, domain, zju):
+def pack(url: list, interval, domain, zju, meta):
     regionDict, total = snippet.mkList(url)  # regions available and corresponding group name
     result = ""
 
@@ -36,8 +36,9 @@ def pack(url: list, interval, domain, zju):
     result += head.PROVIDER_HEAD
     for u in range(len(url)):
         result += head.PROVIDER_BASE0.format(u, url[u], interval, u)
-        for i in regionDict[u]:
-            result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
+        if meta is None:
+            for i in regionDict[u]:
+                result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
     result += "\n"
 
     result += head.PROXY_GROUP_HEAD
@@ -51,13 +52,6 @@ def pack(url: list, interval, domain, zju):
     result += head.PROXY_GROUP_PROXY_MANUAL_SELECT.format(subscriptions)
     # add auto select
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT.format(subscriptions)
-    # add common auto select
-    tmp = ""
-    for i in range(len(regionDict)):
-        for j in regionDict[i]:
-            tmp += "      - " + j + str(i) + "\n"
-    tmp = tmp[:-1]
-    result += head.PROXY_GROUP_PROXY_COMMON_AUTO_SELECT.format(tmp)
     # add fallback
     result += head.PROXY_GROUP_PROXY_FALLBACK.format(subscriptions)
     # add anycast
@@ -79,14 +73,21 @@ def pack(url: list, interval, domain, zju):
     for i in snippet.RULE_GROUP_LIST_REJECT_FIRST:
         result += head.PROXY_GROUP_REJECT_FIRST.format(i)
     # add region groups
-    for i in total:
-        tmp = ""
-        for u in range(len(url)):
-            if i in regionDict[u]:
-                tmp += "      - " + i + str(u) + "\n"
-        tmp = tmp[:-1]
-        result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], tmp)
-    result += "\n"
+    if meta is None:
+        for i in total:
+            tmp = ""
+            for u in range(len(url)):
+                if i in regionDict[u]:
+                    tmp += "      - " + i + str(u) + "\n"
+            tmp = tmp[:-1]
+            result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], tmp)
+        result += "\n"
+    else:
+        for i in total:
+            result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], subscriptions)
+            result += "    filter: \"{}\"".format(total[i][0])
+            result += "\n"
+        result += "\n"
 
     # rules
     result += ("rules:\n  - DOMAIN,{},DIRECT\n".format(domain) + cache.cache)

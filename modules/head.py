@@ -50,7 +50,6 @@ PROXY_GROUP_PROXY_SELECT = """  - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
-      - ♻️ 常见地区自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
 {}
@@ -63,14 +62,6 @@ PROXY_GROUP_PROXY_MANUAL_SELECT = """  - name: 🚀 手动切换
 {}
 """
 PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 30
-    tolerance: 50
-    use:
-{}
-"""
-PROXY_GROUP_PROXY_COMMON_AUTO_SELECT = """  - name: ♻️ 常见地区自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 30

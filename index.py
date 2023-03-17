@@ -20,22 +20,24 @@ def index():
 # api
 @app.route("/sub")
 def sub():
-    url = request.args
+    args = request.args
     # get interval
-    if "interval" in url:
-        interval = url["interval"]
+    if "interval" in args:
+        interval = args["interval"]
     else:
         interval = "600"
     # get port of zju connect 
     zju = {
-        "zjuPort": url.get("zjuport"),
-        "zjuSocksUser": url.get("zjusocksuser"),
-        "zjuSocksPasswd": url.get("zjusockspasswd"),
-        "zjuAddr": url.get("zjuaddr")
+        "zjuPort": args.get("zjuport"),
+        "zjuSocksUser": args.get("zjusocksuser"),
+        "zjuSocksPasswd": args.get("zjusockspasswd"),
+        "zjuAddr": args.get("zjuaddr")
     }
 
+    meta = args.get("meta")  # judge if using the config of clash meta
+
     # get the url of original subscription
-    url = url.get("url")
+    url = args.get("url")
     url = re.split(r"[|\n]", url)
     # remove empty lines
     url = list(filter(lambda x: x!="", url)) 
@@ -59,7 +61,7 @@ def sub():
     urlAfterConv = []
     for i in urltem:
         urlAfterConv.append(providerConvUrl + "/api/convert?" + urlencode(i))
-    result = pack.pack(urlAfterConv, interval, domain, zju)
+    result = pack.pack(url=urlAfterConv, interval=interval, domain=domain, zju=zju, meta=meta)
     return result, headers
 
 

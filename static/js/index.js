@@ -1,6 +1,7 @@
 window.onload = function () {
 	var url = document.getElementById("inp-url");
 	var interval = document.getElementById("inp-interval");
+	var meta = document.getElementById("inp-meta")
 	var socksPort = document.getElementById("inp-socksPort");
 	var socksUsername = document.getElementById("inp-socksUsername");
 	var socksPassword = document.getElementById("inp-socksPassword");
@@ -31,8 +32,11 @@ window.onload = function () {
 			result += "/sub?url=" + encodeURIComponent(url.value);
 		}
 		else {
-			output.value = "订阅链接不能为空哦"
+			output.value = "订阅链接不能为空哦";
 			return;
+		}
+		if (meta.checked) {
+			result += "&meta"
 		}
 		if (interval.value != "") {
 			if (/^[1-9][0-9]*$/.test(interval.value)) {

@@ -31,13 +31,18 @@ textarea {
 	border-radius: 5px;
 	font-size: 15px;
 }
-input {
+input[type="text"] {
 	border: 1px solid gainsboro;
 	width: 300px;
 	height: 30px;
 	padding-left: 10px;
 	border-radius: 5px;
 	font-size: 15px;
+}
+input[type="checkbox"] {
+	border: 1px solid gainsboro;
+	height: 20px;
+	width: 20px;
 }
 
 input:focus {
