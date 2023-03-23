@@ -1,6 +1,6 @@
 # coding=utf-8
 from modules import pack
-import os
+from modules import snippet
 import re
 from flask import Flask, request, render_template 
 import requests
@@ -17,7 +17,7 @@ def index():
     return render_template("index.html")
 
 
-# api
+# subscription converter api
 @app.route("/sub")
 def sub():
     args = request.args
@@ -52,22 +52,30 @@ def sub():
         if 'Content-Disposition' in originalHeaders:  # containing filename
             headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
 
-    urltem = []
-    for i in url:
-        urltem.append({"target": "clash", "url": i}
-    )
-    providerConvUrl = os.environ.get("provider_converter")
-    domain = re.match(r"https?://(.+)", providerConvUrl).group(1)
-    urlAfterConv = []
-    for i in urltem:
-        urlAfterConv.append(providerConvUrl + "/api/convert?" + urlencode(i))
-    result = pack.pack(url=urlAfterConv, interval=interval, domain=domain, zju=zju, meta=meta)
+    content = ""
+    for i in range(len(url)):
+        respText = requests.get(url[i], headers={'User-Agent':'clash'}).text
+        content += respText
+        url[i] = "{}provider?{}".format(request.url_root, urlencode({"url": url[i]}))
+
+    domain = re.search(r"([^:]+)(:\d{1,5})?", request.host).group(1)
+    result = pack.pack(url=url, content=content, interval=interval, domain=domain, zju=zju, meta=meta)
     return result, headers
+
+
+# provider converter
+@app.route("/provider")
+def provider():
+    headers = {'Content-Type': 'text/yaml;charset=utf-8'}
+    url = request.args.get("url")
+    return snippet.parseYAML(
+        requests.get(url, headers={'User-Agent':'clash'}).text
+    ), headers
 
 
 if __name__ == "__main__":
     # Debug
-    # app.run(host="0.0.0.0", port=443, debug=True)
+    app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    server.serve_forever()
+    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    # server.serve_forever()

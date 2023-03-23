@@ -47,20 +47,22 @@ REGION_DICT = {
         "US": [r"US|America|United.*?States|美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥", "🇺🇸 美国节点"]
         }
 
+# parse yaml
+def parseYAML(content):
+    import yaml
+    return yaml.safe_dump(
+        {"proxies": yaml.safe_load(content).get("proxies")}
+    )
 
 # create a dict containg resions and corresponding proxy group
-def mkList(url):
+def mkList(content):
     result = []
     total = {}
-    for u in url:
-        tmp = {}
-        content = requests.get(u).text
-        # preprocess the content
-        contentTmp = re.findall(r"- name: (.+)", content)
-        content = ",".join(contentTmp)
-        for i in REGION_DICT:
-            if re.search(REGION_DICT[i][0], content, re.I) is not None:
-                tmp[i] = REGION_DICT[i]
-                total[i] = REGION_DICT[i]
-        result.append(tmp)
+    tmp = {}
+    # preprocess the content
+    for i in REGION_DICT:
+        if re.search(REGION_DICT[i][0], content, re.I) is not None:
+            tmp[i] = REGION_DICT[i]
+            total[i] = REGION_DICT[i]
+    result.append(tmp)
     return result, total

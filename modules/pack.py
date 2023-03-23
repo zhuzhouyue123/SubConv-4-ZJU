@@ -8,8 +8,8 @@ from modules import head
 import cache
 
 
-def pack(url: list, interval, domain, zju, meta):
-    regionDict, total = snippet.mkList(url)  # regions available and corresponding group name
+def pack(url: list, content: str, interval, domain, zju, meta):
+    regionDict, total = snippet.mkList(content)  # regions available and corresponding group name
     result = ""
 
     # create a snippet containing region groups

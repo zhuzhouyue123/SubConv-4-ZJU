@@ -21,9 +21,9 @@ demo: <https://sub-converter.geniucker.top>
 打开部署的链接或者上面给的demo，填如对应信息，点击确认生成，即可生成新的订阅链接，点击复制即可复制到剪贴板。  
 
 ## 安全性问题
-本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的相关代码和[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)的代码。  
+本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的相关代码  
 
 ## 致谢
-- [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)
-- [subconverter](https://github.com/tindy2013/subconverter)
-- [Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)
+- [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)  
+- [subconverter](https://github.com/tindy2013/subconverter)  
+- ~~[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)~~  
