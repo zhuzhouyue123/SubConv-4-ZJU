@@ -52,13 +52,16 @@ def sub():
         if 'Content-Disposition' in originalHeaders:  # containing filename
             headers['Content-Disposition'] = originalHeaders['Content-Disposition'].replace("attachment", "inline")
 
-    content = ""
+    content = []  # the proxies of original subscriptions
     for i in range(len(url)):
+        # the test of response
         respText = requests.get(url[i], headers={'User-Agent':'clash'}).text
-        content += respText
+        content.append(snippet.parseYAML(respText))
         url[i] = "{}provider?{}".format(request.url_root, urlencode({"url": url[i]}))
 
+    # get the domain or ip of this api to add rule for this
     domain = re.search(r"([^:]+)(:\d{1,5})?", request.host).group(1)
+    # generate the subscription
     result = pack.pack(url=url, content=content, interval=interval, domain=domain, zju=zju, meta=meta)
     return result, headers
 
@@ -75,7 +78,7 @@ def provider():
 
 if __name__ == "__main__":
     # Debug
-    app.run(host="0.0.0.0", port=443, debug=True)
+    # app.run(host="0.0.0.0", port=443, debug=True)
     # Production
-    # server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
-    # server.serve_forever()
+    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server.serve_forever()

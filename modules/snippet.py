@@ -51,18 +51,23 @@ REGION_DICT = {
 def parseYAML(content):
     import yaml
     return yaml.safe_dump(
-        {"proxies": yaml.safe_load(content).get("proxies")}
+        {"proxies": yaml.safe_load(content).get("proxies")},
+        allow_unicode=True,  # display characters like Chinese
+        sort_keys=False  # keep the original sequence
     )
 
 # create a dict containg resions and corresponding proxy group
-def mkList(content):
+def mkList(content: list):
     result = []
     total = {}
-    tmp = {}
-    # preprocess the content
-    for i in REGION_DICT:
-        if re.search(REGION_DICT[i][0], content, re.I) is not None:
-            tmp[i] = REGION_DICT[i]
-            total[i] = REGION_DICT[i]
-    result.append(tmp)
+    for u in content:
+        tmp = {}
+        # preprocess the content
+        contentTmp = re.findall(r"- name: (.+)", u)
+        contentTmp = ",".join(contentTmp)
+        for i in REGION_DICT:
+            if re.search(REGION_DICT[i][0], contentTmp, re.I) is not None:
+                tmp[i] = REGION_DICT[i]
+                total[i] = REGION_DICT[i]
+        result.append(tmp)
     return result, total
