@@ -51,7 +51,7 @@ REGION_DICT = {
 def parseYAML(content):
     import yaml
     return yaml.safe_dump(
-        {"proxies": yaml.safe_load(content).get("proxies")},
+        {"proxies": yaml.load(content, Loader=yaml.FullLoader).get("proxies")},
         allow_unicode=True,  # display characters like Chinese
         sort_keys=False  # keep the original sequence
     )
