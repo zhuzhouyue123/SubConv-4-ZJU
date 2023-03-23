@@ -56,7 +56,7 @@ def mkList(url):
         tmp = {}
         content = requests.get(u).text
         # preprocess the content
-        contentTmp = re.findall(r"- name: (.+)\n", content)
+        contentTmp = re.findall(r"- name: (.+)", content)
         content = ",".join(contentTmp)
         for i in REGION_DICT:
             if re.search(REGION_DICT[i][0], content, re.I) is not None:
