@@ -11,12 +11,6 @@ from gevent import pywsgi
 app = Flask(__name__)
 
 
-# mainpage as well as simple description
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-
 # subscription converter api
 @app.route("/sub")
 def sub():
