@@ -24,6 +24,9 @@ demo: <https://sub-converter.geniucker.top>
 ## 安全性问题
 本接口需要先读取你的订阅的内容再生成地区分组，该过程无任何持久化或网络发送操作，所以是安全的。您可以检查本项目的相关代码  
 
+## 为本项目贡献
+欢迎 issue 和 PR。如果要提pr请从main分支开新分支然后提pr到dev分支，或者也可以先把main合并到dev然后在dev里改，最后提pr到dev  
+
 ## 致谢
 - [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)  
 - [subconverter](https://github.com/tindy2013/subconverter)  
