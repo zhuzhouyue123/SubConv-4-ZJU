@@ -22,6 +22,10 @@ def pack(url: list, content: str, interval, domain, zju, meta):
     result += head.HEAD
     result += "\n"
 
+    # dns
+    result += head.DNS
+    result += "\n"
+
     # proxies
     result += head.PROXIES_HEAD
     if zju["zjuPort"]:
