@@ -13,7 +13,7 @@ RULE_GROUP_LIST_ZJU = [
         "📃 ZJU More Scholar",
 ]
 RULE_GROUP_LIST_PROXY_FIRST = [
-        "🤖 OpenAI",
+        "🤖 ChatGPT",
         "📲 电报消息",
         "📹 油管视频",
         "🎥 奈飞视频",

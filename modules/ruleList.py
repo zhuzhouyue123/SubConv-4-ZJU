@@ -7,7 +7,7 @@ ruleList = [
     ["🎯 全球直连", "https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/direct.list"],
     ["✔ ZJU", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU.list"],
     ["📃 ZJU More Scholar", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"],
-    ["🤖 OpenAI", "https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/openai.list"],
+    ["🤖 ChatGPT", "https://raw.githubusercontent.com/Geniucker/ZJU-Rule/master/Clash/Ruleset/ChatGPT.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/LocalAreaNetwork.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/UnBan.list"],
     ["🛑 广告拦截", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/BanAD.list"],
