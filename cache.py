@@ -108,7 +108,12 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,ascelibrary.org,📃 ZJU More Scholar
-  - DOMAIN-SUFFIX,openai.com,🤖 OpenAI
+  - DOMAIN-SUFFIX,openai.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,ai.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,auth0.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,deepl.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,sentry.io,🤖 ChatGPT
+  - DOMAIN-SUFFIX,bing.com,🤖 ChatGPT
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
