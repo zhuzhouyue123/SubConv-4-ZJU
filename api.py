@@ -27,6 +27,7 @@ def sub():
         "zjuSocksPasswd": args.get("zjusockspasswd"),
         "zjuAddr": args.get("zjuaddr")
     }
+    short = args.get("short")
 
     meta = args.get("meta")  # judge if using the config of clash meta
 
@@ -56,7 +57,7 @@ def sub():
     # get the domain or ip of this api to add rule for this
     domain = re.search(r"([^:]+)(:\d{1,5})?", request.host).group(1)
     # generate the subscription
-    result = pack.pack(url=url, content=content, interval=interval, domain=domain, zju=zju, meta=meta)
+    result = pack.pack(url=url, content=content, interval=interval, domain=domain, zju=zju, meta=meta, short=short)
     return result, headers
 
 

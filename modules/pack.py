@@ -8,7 +8,7 @@ from modules import head
 import cache
 
 
-def pack(url: list, content: str, interval, domain, zju, meta):
+def pack(url: list, content: str, interval, domain, zju, meta, short):
     regionDict, total = snippet.mkList(content)  # regions available and corresponding group name
     result = ""
 
@@ -18,13 +18,14 @@ def pack(url: list, content: str, interval, domain, zju, meta):
         regionGroups += "      - " + i[1] + "\n"
     regionGroups = regionGroups[:-1]
 
-    # head of config
-    result += head.HEAD
-    result += "\n"
+    if short is None:
+        # head of config
+        result += head.HEAD
+        result += "\n"
 
-    # dns
-    result += head.DNS
-    result += "\n"
+        # dns
+        result += head.DNS
+        result += "\n"
 
     # proxies
     result += head.PROXIES_HEAD
