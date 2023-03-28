@@ -94,7 +94,9 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,nejm.org,✔ ZJU
   - DOMAIN-SUFFIX,icevirtuallibrary.com,✔ ZJU
   - DOMAIN-SUFFIX,cdnsciencepub.com,✔ ZJU
+  - DOMAIN-SUFFIX,canvas-user-content.com,📃 ZJU More Scholar
   - DOMAIN-KEYWORD,illinois,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,iclicker.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,emerald.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,ieee.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,proquest.com,📃 ZJU More Scholar
@@ -108,6 +110,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,worldscientific.com,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,siam.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,ascelibrary.org,📃 ZJU More Scholar
+  - DOMAIN-SUFFIX,scitation.org,📃 ZJU More Scholar
   - DOMAIN-SUFFIX,openai.com,🤖 ChatGPT
   - DOMAIN-SUFFIX,ai.com,🤖 ChatGPT
   - DOMAIN-SUFFIX,auth0.com,🤖 ChatGPT
