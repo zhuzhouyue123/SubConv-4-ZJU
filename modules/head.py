@@ -21,8 +21,7 @@ DNS = """dns:
     - "https://1.12.12.12/dns-query"
     - "https://8.8.8.8/dns-query"
   fallback-filter:
-    geoip: true
-    geoip-code: CN
+    geoip: false
     domain:
       - +.zju.edu.cn
   fallback:
