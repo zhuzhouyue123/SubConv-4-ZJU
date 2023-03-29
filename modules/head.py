@@ -27,8 +27,8 @@ DNS = """dns:
       - +.zju.edu.cn
   fallback:
     - "https://1.1.1.1/dns-query"
-    - "tcp://8.8.8.8"
-    - "tcp://10.10.0.21"
+    - 8.8.8.8
+    - 10.10.0.21
 """
 
 PROXIES_HEAD = """proxies:
