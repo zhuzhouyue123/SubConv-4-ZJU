@@ -5,6 +5,7 @@ And it's automatically generalted by GitHub Action
 
 cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,supercell.com,🎯 全球直连
+  - DOMAIN-SUFFIX,clashroyale.com,🎯 全球直连
   - DOMAIN-KEYWORD,rvpn,🎯 全球直连
   - DOMAIN-KEYWORD,uiuc,🎯 全球直连
   - DOMAIN-KEYWORD,sso,🎯 全球直连
