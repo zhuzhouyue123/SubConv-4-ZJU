@@ -120,6 +120,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,deepl.com,🤖 ChatGPT
   - DOMAIN-SUFFIX,sentry.io,🤖 ChatGPT
   - DOMAIN-SUFFIX,bing.com,🤖 ChatGPT
+  - DOMAIN-SUFFIX,bard.google.com,🤖 ChatGPT
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
