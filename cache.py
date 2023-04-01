@@ -12,6 +12,8 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-KEYWORD,sso,🎯 全球直连
   - DOMAIN-KEYWORD,shibboleth,🎯 全球直连
   - DOMAIN-SUFFIX,duosecurity.com,🎯 全球直连
+  - DOMAIN-SUFFIX,insops.net,🎯 全球直连
+  - DOMAIN-SUFFIX,zoom.us,🎯 全球直连
   - DOMAIN,searxng.geniucker.top,🎯 全球直连
   - DOMAIN,docker.hkcloud.geniucker.top,🎯 全球直连
   - DOMAIN,room.geniucker.top,🎯 全球直连
