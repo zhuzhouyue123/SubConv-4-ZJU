@@ -71,13 +71,13 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
     for group in config.custom_proxy_group:
         type = group["type"]
         if type == "load-balance":
-            location = group.get("location")
-            if location is None:
+            region = group.get("region")
+            if region is None:
                 result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
             else:
                 if meta is None:
                     tmp = ""
-                    for i in location:
+                    for i in region:
                         if i in total:
                             for u in range(len(url)):
                                 if i in regionDict[u]:
@@ -86,7 +86,7 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
                         result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], tmp)
                 else:
                     tmp = []
-                    for i in location:
+                    for i in region:
                         if i in total:
                             tmp.append(total[i][0])
                     if len(tmp) > 0:

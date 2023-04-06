@@ -46,7 +46,7 @@ custom_proxy_group = [
     {
         "name": "🔮 香港负载均衡",
         "type": "load-balance",
-        "location": ["HK"]
+        "region": ["HK"]
     },
     {
         "name": "✔ ZJU",
