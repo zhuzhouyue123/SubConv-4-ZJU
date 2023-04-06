@@ -10,6 +10,7 @@ demo: <https://sub-converter.geniucker.top>
 - （为土豪）多机场用户提供了支持  
 - 剩余流量和总流量的显示（单机场的时候才有用，需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
 - 实现了 clash 订阅转换 proxy-provider 的 api, (一般人也不会去用吧), 不再依赖 [Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter) , 用法`<网页根目录>/provider?url=<你的订阅>`,例如上面给出的示例,地址为`https://sub-converter.geniucker.top/provider?url=<你的订阅>`,`<你的订阅>`自行替换  
+- 支持配置文件 (`config.py`，之后说不定会写subconverter配置到本项目的转换)  
 ## 说明
 ~~如需使用请自行部署（因为vercel每个人的用量是有限的，太多人用会挂）~~ 新开了个vercel号用于demo。你可以用上面的demo（不保证可用性，但基本上不会出啥问题），也可以自己部署，推荐部署在vercel，一是免费，二是规则缓存在仓库里，更新的时候Vercel会自动更新，如确实想部署到服务器，可以先看[Wiki](https://github.com/Geniucker/sub-conv/wiki)里部署到Vercel的教程，然后自行解决规则更新问题，当然你可以联系我问我一些注意事项  
 这一页只是简单说明，详细用法和**部署方法**请看[Wiki](https://github.com/Geniucker/sub-conv/wiki) (英文写的)  
