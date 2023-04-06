@@ -5,6 +5,7 @@ This module is to general a complete config for Clash
 
 from modules import snippet
 from modules import head
+import config
 import cache
 
 
@@ -47,6 +48,7 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
     result += "\n"
 
     result += head.PROXY_GROUP_HEAD
+    
     # add proxy select
     result += head.PROXY_GROUP_PROXY_SELECT.format(regionGroups)
     # add manual select
@@ -59,24 +61,43 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT.format(subscriptions)
     # add fallback
     result += head.PROXY_GROUP_PROXY_FALLBACK.format(subscriptions)
-    # add anycast
-    result += head.PROXY_GROUP_PROXY_ANYCAST.format(subscriptions)
-    # add zju groups
-    for i in snippet.RULE_GROUP_LIST_ZJU:
-        result += head.PROXY_GROUP_ZJU.format(
-            i,
-            "\n      - ZJU内网" if zju["zjuPort"] else "",
-            regionGroups
-        )
-    # add proxy first groups
-    for i in snippet.RULE_GROUP_LIST_PROXY_FIRST:
-        result += head.PROXY_GROUP_PROXY_FIRST.format(i, regionGroups)
-    # add direct forst groups
-    for i in snippet.RULE_GROUP_LIST_DIRECT_FIRST:
-        result += head.PROXY_GROUP_DIRECT_FIRST.format(i, regionGroups)
-    # add reject first groups
-    for i in snippet.RULE_GROUP_LIST_REJECT_FIRST:
-        result += head.PROXY_GROUP_REJECT_FIRST.format(i)
+
+    # add proxy groups
+    for group in config.custom_proxy_group:
+        type = group["type"]
+        if type == "load-balance":
+            location = group.get("location")
+            if location is None:
+                result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
+            else:
+                if meta is None:
+                    tmp = ""
+                    for i in location:
+                        if i in total:
+                            for u in range(len(url)):
+                                if i in regionDict[u]:
+                                    tmp += "      - " + i + str(u) + "\n"
+                    if tmp != "":
+                        result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], tmp)
+                else:
+                    tmp = []
+                    for i in location:
+                        if i in total:
+                            tmp.append(total[i][0])
+                    if len(tmp) > 0:
+                        result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
+                        result += "    filter: \"{}\"".format("|".join(tmp))
+                        result += "\n"
+
+        elif type == "select":
+            prior = group["prior"]
+            if prior == "DIRECT":
+                result += head.PROXY_GROUP_DIRECT_FIRST.format(group["name"], regionGroups)
+            elif prior == "REJECT":
+                result += head.PROXY_GROUP_REJECT_FIRST.format(group["name"], regionGroups)
+            else:
+                result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
+
     # add region groups
     if meta is None:
         for i in total:

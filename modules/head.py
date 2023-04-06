@@ -97,7 +97,7 @@ PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
     use:
 {}
 """
-PROXY_GROUP_PROXY_ANYCAST = """  - name: 🔮 负载均衡
+PROXY_GROUP_PROXY_ANYCAST = """  - name: {}
     type: load-balance
     strategy: consistent-hashing
     url: http://www.apple.com/library/test/success.html
@@ -135,6 +135,9 @@ PROXY_GROUP_REJECT_FIRST = """  - name: {}
     proxies:
       - REJECT
       - DIRECT
+      - 🚀 节点选择
+{}
+      - 🚀 手动切换
 """
 PROXY_GROUP_REGION_GROUPS = """  - name: {}
     type: url-test
