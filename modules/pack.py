@@ -90,13 +90,20 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
                         result += "\n"
 
         elif type == "select":
-            prior = group["prior"]
-            if prior == "DIRECT":
-                result += head.PROXY_GROUP_DIRECT_FIRST.format(group["name"], regionGroups)
-            elif prior == "REJECT":
-                result += head.PROXY_GROUP_REJECT_FIRST.format(group["name"], regionGroups)
+            if group.get("ZJU"):
+                    result += head.PROXY_GROUP_ZJU.format(
+                        group["name"],
+                        "\n      - ZJU内网" if zju["zjuPort"] else "",
+                        regionGroups
+                    )
             else:
-                result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
+                prior = group["prior"]
+                if prior == "DIRECT":
+                    result += head.PROXY_GROUP_DIRECT_FIRST.format(group["name"], regionGroups)
+                elif prior == "REJECT":
+                    result += head.PROXY_GROUP_REJECT_FIRST.format(group["name"], regionGroups)
+                else:
+                    result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
 
     # add region groups
     if meta is None:

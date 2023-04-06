@@ -3,40 +3,9 @@ This module is to get the list of regions available in orginal subscription
 """
 
 
-import requests
 import re
 
 
-# lists groups
-RULE_GROUP_LIST_ZJU = [
-        "✔ ZJU",
-        "📃 ZJU More Scholar",
-]
-RULE_GROUP_LIST_PROXY_FIRST = [
-        "🤖 ChatGPT",
-        "📲 电报消息",
-        "📹 油管视频",
-        "🎥 奈飞视频",
-        "📺 巴哈姆特",
-        "🎥 奈飞节点",
-        "🌍 国外媒体",
-        "🐟 漏网之鱼",
-        ]
-RULE_GROUP_LIST_DIRECT_FIRST = [
-        "📺 哔哩哔哩",
-        "🌏 国内媒体",
-        "📢 谷歌FCM",
-        "Ⓜ️ 微软云盘",
-        "Ⓜ️ 微软服务",
-        "🍎 苹果服务",
-        "🎮 游戏平台",
-        "🎶 网易音乐",
-        "🎯 全球直连",
-        ]
-RULE_GROUP_LIST_REJECT_FIRST = [
-        "🛑 广告拦截",
-        "🍃 应用净化",
-        ]
 # regions and the regular expression to match them
 REGION_DICT = {
         "HK": [r"HK|Hong|Kong|HGC|WTT|CMI|港", "🇭🇰 香港节点"],

@@ -51,12 +51,12 @@ custom_proxy_group = [
     {
         "name": "✔ ZJU",
         "type": "select",
-        "prior": "DIRECT"
+        "ZJU": True,
     },
     {
         "name": "📃 ZJU More Scholar",
         "type": "select",
-        "prior": "DIRECT"
+        "ZJU": True,
     },
     {
         "name": "🤖 ChatBot",
