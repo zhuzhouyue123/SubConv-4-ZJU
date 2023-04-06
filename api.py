@@ -19,7 +19,7 @@ def sub():
     if "interval" in args:
         interval = args["interval"]
     else:
-        interval = "600"
+        interval = "1800"
     # get port of zju connect 
     zju = {
         "zjuPort": args.get("zjuport"),
