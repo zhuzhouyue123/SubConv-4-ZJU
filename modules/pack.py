@@ -50,7 +50,12 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
     result += head.PROXY_GROUP_HEAD
     
     # add proxy select
-    result += head.PROXY_GROUP_PROXY_SELECT.format(regionGroups)
+    tmp = "\n"
+    for group in config.custom_proxy_group:
+        if group["type"] == "load-balance":
+            tmp += "      - " + group["name"] + "\n"
+    tmp += regionGroups
+    result += head.PROXY_GROUP_PROXY_SELECT.format(tmp)
     # add manual select
     subscriptions = ""
     for u in range(len(url)):

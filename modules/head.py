@@ -71,8 +71,7 @@ PROXY_GROUP_PROXY_SELECT = """  - name: 🚀 节点选择
     proxies:
       - ♻️ 自动选择
       - 🔯 故障转移
-      - 🔮 负载均衡
-{}
+      - 🔮 负载均衡{}
       - 🚀 手动切换
       - DIRECT
 """
