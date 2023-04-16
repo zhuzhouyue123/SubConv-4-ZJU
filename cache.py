@@ -119,8 +119,6 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,openai.com,🤖 ChatBot
   - DOMAIN-SUFFIX,ai.com,🤖 ChatBot
   - DOMAIN-SUFFIX,auth0.com,🤖 ChatBot
-  - DOMAIN-SUFFIX,deepl.com,🤖 ChatBot
-  - DOMAIN-SUFFIX,sentry.io,🤖 ChatBot
   - DOMAIN-SUFFIX,bing.com,🤖 ChatBot
   - DOMAIN-SUFFIX,bard.google.com,🤖 ChatBot
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
