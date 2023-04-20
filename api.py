@@ -37,6 +37,11 @@ def sub():
     # remove empty lines
     url = list(filter(lambda x: x!="", url)) 
 
+    urlstandby = args.get("urlstandby")
+    if urlstandby:
+        urlstandby = re.split(r"[|\n]", urlstandby)
+        urlstandby = list(filter(lambda x: x!="", urlstandby))
+
     # get original headers
     headers = {'Content-Type': 'text/yaml;charset=utf-8'}
     # if there's only one subscription, return userinfo
@@ -53,11 +58,14 @@ def sub():
         respText = requests.get(url[i], headers={'User-Agent':'clash'}).text
         content.append(snippet.parseYAML(respText))
         url[i] = "{}provider?{}".format(request.url_root, urlencode({"url": url[i]}))
+    if urlstandby:
+        for i in range(len(urlstandby)):
+            urlstandby[i] = "{}provider?{}".format(request.url_root, urlencode({"url": urlstandby[i]}))
 
     # get the domain or ip of this api to add rule for this
     domain = re.search(r"([^:]+)(:\d{1,5})?", request.host).group(1)
     # generate the subscription
-    result = pack.pack(url=url, content=content, interval=interval, domain=domain, zju=zju, meta=meta, short=short)
+    result = pack.pack(url=url, urlstandby=urlstandby, content=content, interval=interval, domain=domain, zju=zju, meta=meta, short=short)
     return result, headers
 
 

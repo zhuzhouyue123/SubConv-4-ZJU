@@ -9,7 +9,7 @@ import config
 import cache
 
 
-def pack(url: list, content: str, interval, domain, zju, meta, short):
+def pack(url: list, urlstandby, content: str, interval, domain, zju, meta, short):
     regionDict, total = snippet.mkList(content)  # regions available and corresponding group name
     result = ""
 
@@ -45,6 +45,9 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
         if meta is None:
             for i in regionDict[u]:
                 result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
+    if urlstandby:
+        for u in range(len(urlstandby)):
+            result += head.PROVIDER_BASE0.format("sub"+str(u), urlstandby[u], interval, "sub"+str(u))
     result += "\n"
 
     result += head.PROXY_GROUP_HEAD
@@ -60,8 +63,13 @@ def pack(url: list, content: str, interval, domain, zju, meta, short):
     subscriptions = ""
     for u in range(len(url)):
         subscriptions += "      - subscription" + str(u) + "\n"
+    standby = subscriptions
+    if urlstandby:
+        for u in range(len(urlstandby)):
+            standby += "      - subscriptionsub" + str(u) + "\n"
+    standby = standby[:-1]
     subscriptions = subscriptions[:-1]
-    result += head.PROXY_GROUP_PROXY_MANUAL_SELECT.format(subscriptions)
+    result += head.PROXY_GROUP_PROXY_MANUAL_SELECT.format(standby)
     # add auto select
     result += head.PROXY_GROUP_PROXY_AUTO_SELECT.format(subscriptions)
     # add fallback
