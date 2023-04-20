@@ -12,6 +12,8 @@ on:
     paths:
         - '*.list'
         - '.github/workflows/**.yml'
+permissions:
+  contents: write
 
 jobs:
   sync:
@@ -51,6 +53,6 @@ jobs:
       run: |
         git config --global user.name 'Git bot'
         git config --global user.email 'bot@noreply.github.com'
-        git remote set-url origin https://x-access-token:${{ secrets.RELEASE_HUB_SECRET }}@github.com/${{ github.repository }}
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git add -A
         git commit -am "Auto updated rules" && git push || echo "No changes to commit"
