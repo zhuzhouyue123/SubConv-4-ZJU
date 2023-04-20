@@ -18,6 +18,7 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN,docker.hkcloud.geniucker.top,🎯 全球直连
   - DOMAIN,room.geniucker.top,🎯 全球直连
   - DOMAIN,nps.geniucker.top,🎯 全球直连
+  - DOMAIN,az.geniucker.top,🎯 全球直连
   - DST-PORT,22,🎯 全球直连
   - DOMAIN-SUFFIX,zju.edu.cn,✔ ZJU
   - DOMAIN-KEYWORD,cc98,✔ ZJU
