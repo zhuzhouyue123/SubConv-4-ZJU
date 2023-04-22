@@ -46169,6 +46169,14 @@ cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - IP-CIDR,223.252.199.66/31,🎶 网易音乐,no-resolve
   - IP-CIDR,223.252.199.66/32,🎶 网易音乐,no-resolve
   - IP-CIDR,223.252.199.67/32,🎶 网易音乐,no-resolve
+  - DOMAIN-KEYWORD,-spotify-com,🎶 Spotify
+  - DOMAIN-KEYWORD,spotify.com,🎶 Spotify
+  - DOMAIN-SUFFIX,pscdn.co,🎶 Spotify
+  - DOMAIN-SUFFIX,scdn.co,🎶 Spotify
+  - DOMAIN-SUFFIX,spoti.fi,🎶 Spotify
+  - DOMAIN-SUFFIX,spotify.com,🎶 Spotify
+  - DOMAIN-SUFFIX,spotifycdn.com,🎶 Spotify
+  - DOMAIN-SUFFIX,spotifycdn.net,🎶 Spotify
   - DOMAIN-SUFFIX,epicgames.com,🎮 游戏平台
   - DOMAIN-SUFFIX,epicgames.dev,🎮 游戏平台
   - DOMAIN-SUFFIX,helpshift.com,🎮 游戏平台
