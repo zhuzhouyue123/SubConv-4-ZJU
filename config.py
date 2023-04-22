@@ -18,6 +18,7 @@ ruleset = [
     ["🍎 苹果服务", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Apple.list"],
     ["📲 电报消息", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Telegram.list"],
     ["🎶 网易音乐", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/NetEaseMusic.list"],
+    ["🎶 Spotify", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/Spotify.list"],
     ["🎮 游戏平台", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/Epic.list"],
     ["🎮 游戏平台", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/Sony.list"],
     ["🎮 游戏平台", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/Steam.list"],
@@ -127,6 +128,11 @@ custom_proxy_group = [
         "name": "🎶 网易音乐",
         "type": "select",
         "prior": "DIRECT"
+    },
+    {
+        "name": "🎶 Spotify",
+        "type": "select",
+        "prior": "PROXY"
     },
     {
         "name": "🎯 全球直连",
