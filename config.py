@@ -132,7 +132,7 @@ custom_proxy_group = [
     {
         "name": "🎶 Spotify",
         "type": "select",
-        "prior": "PROXY"
+        "prior": "DIRECT"
     },
     {
         "name": "🎯 全球直连",
