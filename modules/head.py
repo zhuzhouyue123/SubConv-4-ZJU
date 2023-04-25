@@ -28,6 +28,7 @@ DNS = """dns:
     - "https://1.1.1.1/dns-query"
     - "https://8.8.8.8/dns-query"
     - "tcp://10.10.0.21"
+    - "tcp://10.105.1.122"
 """
 
 PROXIES_HEAD = """proxies:
