@@ -12,6 +12,7 @@ on:
     paths:
         - '*.list'
         - '.github/workflows/**.yml'
+        - 'config.py'
 permissions:
   contents: write
 

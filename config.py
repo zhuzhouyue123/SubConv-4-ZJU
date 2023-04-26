@@ -12,7 +12,7 @@ ruleset = [
     ["🛑 广告拦截", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/BanEasyListChina.list"],
     ["🛡️ 隐私防护", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/BanEasyPrivacy.list"],
     ["📢 谷歌FCM", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/GoogleFCM.list"],
-    ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/GoogleCN.list"],
+    # ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/GoogleCN.list"],
     ["Ⓜ️ 微软云盘", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/OneDrive.list"],
     ["Ⓜ️ 微软服务", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Microsoft.list"],
     ["🍎 苹果服务", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Apple.list"],
