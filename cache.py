@@ -3,7 +3,8 @@ This file is a cache of rules from modules/ruleList.
 And it's automatically generalted by GitHub Action
 """
 
-cache="""  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
+cache="""  - DOMAIN,room.geniucker.top,✔ ZJU
+  - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,supercell.com,🎯 全球直连
   - DOMAIN-SUFFIX,clashroyale.com,🎯 全球直连
   - DOMAIN-SUFFIX,clashroyaleapp.com,🎯 全球直连
