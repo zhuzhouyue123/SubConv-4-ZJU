@@ -6,6 +6,7 @@ demo: <https://sub-converter.geniucker.top>
 > ***有能力请自行部署，因为vercel仓库所有者可以通过日志看到一个小时内发生错误的那次请求的请求参数***，当然我不会闲着没事去看，但请自行评估风险
 
 ## 功能
+- 一个可以勉强能看的订阅转换 Web-UI (感谢 [@Musanico](https://github.com/musanico))  
 - 大体基于 ACL 的规则（包括了ZJU专用规则）  
 - 基于 Provider 的节点自动更新  
 - 对[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)的支持  
