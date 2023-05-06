@@ -20,6 +20,24 @@ DNS = """dns:
     - "https://223.5.5.5/dns-query"
     - "https://1.12.12.12/dns-query"
     - "https://8.8.8.8/dns-query"
+  fallback-filter:
+    geoip: false
+    domain:
+      - +.zju.edu.cn
+  fallback:
+    - "https://1.1.1.1/dns-query"
+    - "https://8.8.8.8/dns-query"
+    - "tcp://10.10.0.21"
+    - "tcp://10.105.1.122"
+"""
+
+PROXIES_HEAD = """proxies:
+"""
+ZJU_PROXY = """  - name: "ZJU内网"
+    type: socks5
+    server: {} 
+    port: {}{}{}
+
 """
 
 PROVIDER_HEAD = "proxy-providers:\n"
@@ -87,6 +105,14 @@ PROXY_GROUP_PROXY_ANYCAST = """  - name: {}
     tolerance: 50
     use:
 {}
+"""
+PROXY_GROUP_ZJU = """  - name: {}
+    type: select
+    proxies:
+      - DIRECT{}
+      - 🚀 节点选择
+{}
+      - 🚀 手动切换
 """
 PROXY_GROUP_PROXY_FIRST = """  - name: {}
     type: select

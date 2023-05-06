@@ -1,5 +1,9 @@
 
 ruleset = [
+    ["✔ ZJU", "https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/tmp.list"],
+    ["🎯 全球直连", "https://raw.githubusercontent.com/Geniucker/sub-conv/custom-rules/direct.list"],
+    ["✔ ZJU", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU.list"],
+    ["📃 ZJU More Scholar", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"],
     ["🤖 ChatBot", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/ChatBot.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/LocalAreaNetwork.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/UnBan.list"],
@@ -45,6 +49,16 @@ custom_proxy_group = [
         "name": "🔮 香港负载均衡",
         "type": "load-balance",
         "region": ["HK"]
+    },
+    {
+        "name": "✔ ZJU",
+        "type": "select",
+        "ZJU": True,
+    },
+    {
+        "name": "📃 ZJU More Scholar",
+        "type": "select",
+        "ZJU": True,
     },
     {
         "name": "🤖 ChatBot",
