@@ -9,7 +9,7 @@ import config
 import cache
 
 
-def pack(url: list, urlstandby, content: str, interval, domain, zju, meta, short):
+def pack(url: list, urlstandby, content: str, interval, domain, meta, short):
     regionDict, total = snippet.mkList(content)  # regions available and corresponding group name
     result = ""
 
@@ -28,15 +28,6 @@ def pack(url: list, urlstandby, content: str, interval, domain, zju, meta, short
         result += head.DNS
         result += "\n"
 
-    # proxies
-    result += head.PROXIES_HEAD
-    if zju["zjuPort"]:
-        result += head.ZJU_PROXY.format(
-            zju["zjuAddr"] if zju["zjuAddr"] else "localhost",
-            zju["zjuPort"],
-            ("\n    username: "+zju["zjuSocksUser"]) if zju["zjuSocksUser"] else "",
-            ("\n    password: "+zju["zjuSocksPasswd"]) if zju["zjuSocksPasswd"] else ""
-        )
 
     # proxy providers
     result += head.PROVIDER_HEAD
@@ -103,20 +94,13 @@ def pack(url: list, urlstandby, content: str, interval, domain, zju, meta, short
                         result += "\n"
 
         elif type == "select":
-            if group.get("ZJU"):
-                    result += head.PROXY_GROUP_ZJU.format(
-                        group["name"],
-                        "\n      - ZJU内网" if zju["zjuPort"] else "",
-                        regionGroups
-                    )
+            prior = group["prior"]
+            if prior == "DIRECT":
+                result += head.PROXY_GROUP_DIRECT_FIRST.format(group["name"], regionGroups)
+            elif prior == "REJECT":
+                result += head.PROXY_GROUP_REJECT_FIRST.format(group["name"], regionGroups)
             else:
-                prior = group["prior"]
-                if prior == "DIRECT":
-                    result += head.PROXY_GROUP_DIRECT_FIRST.format(group["name"], regionGroups)
-                elif prior == "REJECT":
-                    result += head.PROXY_GROUP_REJECT_FIRST.format(group["name"], regionGroups)
-                else:
-                    result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
+                result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
 
     # add region groups
     if meta is None:
