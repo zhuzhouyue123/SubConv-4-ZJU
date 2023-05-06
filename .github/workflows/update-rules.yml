@@ -31,7 +31,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.RELEASE_HUB_SECRET }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         submodules: true
 
     - name: Setup Python
