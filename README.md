@@ -13,7 +13,7 @@ demo: <https://zju.sub-converter.geniucker.top>
 - 对[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)的支持  
 - （为土豪）多机场用户提供了支持  
 - 剩余流量和总流量的显示（单机场的时候才有用，需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
-- 实现了 clash 订阅转换 proxy-provider 的 api, (一般人也不会去用吧), 不再依赖 [Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter) , 用法`<网页根目录>/provider?url=<你的订阅>`,例如上面给出的示例,地址为`https://sub-converter.geniucker.top/provider?url=<你的订阅>`,`<你的订阅>`自行替换  
+- 实现了 clash 订阅转换 proxy-provider 的 api, (一般人也不会去用吧), 不再依赖 [Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter) , 用法`<网页根目录>/provider?url=<你的订阅>`,例如上面给出的示例,地址为`https://zju.sub-converter.geniucker.top/provider?url=<你的订阅>`,`<你的订阅>`自行替换  
 - 支持配置文件 (`config.py`，之后说不定会写subconverter配置到本项目的转换)  
 
 ## 部署
