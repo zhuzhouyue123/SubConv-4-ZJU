@@ -1,5 +1,5 @@
 # Subscription Converter
-![license](https://img.shields.io/github/license/geniucker/sub-conv) ![last commit](https://img.shields.io/github/last-commit/geniucker/sub-conv)
+![license](https://img.shields.io/github/license/geniucker/sub-conv) ![last commit](https://img.shields.io/github/last-commit/geniucker/sub-conv)  
 这个项目是面向所有Clash用户的订阅转换，如果你需要ZJU专版，请移步[sub-conv 4 ZJU](https://github.com/geniucker/sub-conv-4-ZJU)
 这是一个Clash订阅转换接口(仅提供试用，不保证安全性及可用性)  
 demo: <https://sub-converter.geniucker.top>  
