@@ -1,5 +1,5 @@
 # Subscription Converter (for ZJUers)
-
+![license](https://img.shields.io/github/license/geniucker/sub-conv-4-ZJU) ![last commit](https://img.shields.io/github/last-commit/geniucker/sub-conv-4-ZJU)  
 这是 [sub-conv](https://github.com/geniucker/sub-conv) 的一个fork，是ZJU专版的 [sub-conv](https://github.com/geniucker/sub-conv) ，但是由于不能fork自己的项目，我已我手动开了一个仓库  
 这是一个Clash订阅转换接口(仅提供试用，不保证安全性及可用性)  
 demo: <https://zju.sub-converter.geniucker.top>  
@@ -24,7 +24,7 @@ demo: <https://zju.sub-converter.geniucker.top>
 ~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~ 现理论上适配所有机场，只需原始配置是Clash配置即可，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点(不需要自动更新的脚本，是clash核心本身支持的)<br>
 本项目地址：<https://github.com/Geniucker/sub-conv-4-ZJU><br>
 规则来源：浙大和通用规则<https://github.com/Mythologyli/ZJU-Rule>和我的自定义规则<https://github.com/Geniucker/sub-conv/tree/custom-rules><br>
-代码直接读取的规则具体参见`modules/ruleList.py`和`cache.py`文件<br>
+代码直接读取的规则具体参见`modules/ruleList.py`<br>
 
 ## 食用方法
 打开部署的链接或者上面给的demo，填如对应信息，点击确认生成，即可生成新的订阅链接，点击复制即可复制到剪贴板。  
