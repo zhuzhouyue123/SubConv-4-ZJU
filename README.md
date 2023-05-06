@@ -1,4 +1,5 @@
 # Subscription Converter
+(for ZJUers)
 这是一个Clash订阅转换接口(仅提供试用，不保证安全性及可用性)  
 demo: <https://sub-converter.geniucker.top>  
 如果是试用可以直接点进demo看用法  
@@ -6,8 +7,9 @@ demo: <https://sub-converter.geniucker.top>
 
 ## 功能
 - 一个可以勉强能看的订阅转换 Web-UI (感谢 [@Musanico](https://github.com/musanico))  
-- 大体基于 ACL 的规则  
+- 大体基于 ACL 的规则（包括了ZJU专用规则）  
 - 基于 Provider 的节点自动更新  
+- 对[ZJU Connect](https://github.com/Mythologyli/ZJU-Connect/)的支持  
 - （为土豪）多机场用户提供了支持  
 - 剩余流量和总流量的显示（单机场的时候才有用，需要你的机场和你用的Clash同时支持，已知Clash for Windows, Clash Verge, Stash, Clash Meta for Android等已支持）  
 - 实现了 clash 订阅转换 proxy-provider 的 api, (一般人也不会去用吧), 不再依赖 [Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter) , 用法`<网页根目录>/provider?url=<你的订阅>`,例如上面给出的示例,地址为`https://sub-converter.geniucker.top/provider?url=<你的订阅>`,`<你的订阅>`自行替换  
@@ -20,8 +22,8 @@ demo: <https://sub-converter.geniucker.top>
 ##说明
 ~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~ 现理论上适配所有机场，只需原始配置是Clash配置即可，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点(不需要自动更新的脚本，是clash核心本身支持的)<br>
 本项目地址：<https://github.com/Geniucker/sub-conv><br>
-规则来源：通用规则<https://github.com/Mythologyli/ZJU-Rule><br>
-代码直接读取的规则具体参见`modules/ruleList.py`<br>
+规则来源：浙大和通用规则<https://github.com/Mythologyli/ZJU-Rule>和我的自定义规则<https://github.com/Geniucker/sub-conv/tree/custom-rules><br>
+代码直接读取的规则具体参见`modules/ruleList.py`和`cache.py`文件<br>
 
 ## 食用方法
 打开部署的链接或者上面给的demo，填如对应信息，点击确认生成，即可生成新的订阅链接，点击复制即可复制到剪贴板。  
