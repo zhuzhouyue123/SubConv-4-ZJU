@@ -2,6 +2,7 @@
 ruleset = [
     ["✔ ZJU", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/tmp.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/direct.list"],
+    ["🛸 PT站", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/PrivateTracker.list"]
     ["✔ ZJU", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU.list"],
     ["📃 ZJU More Scholar", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"],
     ["🤖 ChatBot", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/ChatBot.list"],
@@ -134,6 +135,11 @@ custom_proxy_group = [
     },
     {
         "name": "🎶 Spotify",
+        "type": "select",
+        "prior": "DIRECT"
+    },
+    {
+        "name": "🛸 PT站",
         "type": "select",
         "prior": "DIRECT"
     },
