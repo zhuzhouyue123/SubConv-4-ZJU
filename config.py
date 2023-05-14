@@ -1,8 +1,9 @@
 
 ruleset = [
-    ["✔ ZJU", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/tmp.list"],
+    ["✔ ZJU", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/room.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/direct.list"],
     ["🛸 PT站", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/PrivateTracker.list"],
+    ["✔ ZJU-INTL", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/ZJU-INTL.list"],
     ["✔ ZJU", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU.list"],
     ["📃 ZJU More Scholar", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"],
     ["🤖 ChatBot", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/OpenAi.list"],
@@ -53,6 +54,11 @@ custom_proxy_group = [
         "name": "🔮 香港负载均衡",
         "type": "load-balance",
         "region": ["HK"]
+    },
+    {
+        "name": "✔ ZJU-INTL",
+        "type": "select",
+        "prior": "DIRECT"
     },
     {
         "name": "✔ ZJU",
