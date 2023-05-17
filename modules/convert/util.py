@@ -1,4 +1,5 @@
 import random
+import base64
 
 
 userAgents = [
@@ -268,8 +269,21 @@ def uniqueName(names: dict, name):
 		name = "%s-%02d" % (name, index)
 	return name
 
+def urlSafe(string):
+	return string.replace("+", "-").replace("/", "_")
+
 def get(content):
     if content is None:
         return ""
     else:
         return content
+
+def base64RawStdDecode(encoded):
+	return base64.b64decode(
+              encoded + "="*(-len(encoded)%4)
+	).decode("utf-8")
+
+def base64RawURLDecode(encoded):
+	return base64.urlsafe_b64decode(
+			  encoded + "="*(-len(encoded)%4)
+	).decode("utf-8")

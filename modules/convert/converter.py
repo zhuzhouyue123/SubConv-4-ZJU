@@ -3,6 +3,9 @@
 from modules.convert.util import RandUserAgent
 from modules.convert.util import get
 from modules.convert.util import uniqueName
+from modules.convert.util import urlSafe
+from modules.convert.util import base64RawStdDecode
+from modules.convert.util import base64RawURLDecode
 from modules.convert.v import handleVShareLink
 
 import json
@@ -247,11 +250,120 @@ def ConvertsV2Ray(buf):
 
         # ss and ssr still WIP
         elif scheme == "ss":
-            pass
+            try: 
+                urlSS = urlparse.urlparse(line)
+            except:
+                continue
+
+            name = uniqueName(names, urlparse.unquote(urlSS.fragment))
+            port = urlSS.port
+
+            if port == "":
+                try:
+                    dcBuf = base64RawStdDecode(urlSS.hostname)
+                except:
+                    continue
+
+                try:
+                    urlSS = urlparse.urlparse("ss://"+dcBuf)
+                except:
+                    continue
+            
+            # there may be bugs
+            cipherRaw = urlSS.username
+            cipher = cipherRaw
+            password = urlSS.password
+            if password is None:
+                try:
+                    dcBuf = base64RawStdDecode(cipherRaw)
+                except:
+                    try:
+                        dcBuf = base64RawURLDecode(cipherRaw)
+                    except:
+                        continue
+                try:
+                    cipher, password = dcBuf.split(":", 1)
+                except:
+                    continue
+            # ther may be bugs
+
+            ss = {}
+
+            ss["name"] = name
+            ss["type"] = scheme
+            ss["server"] = urlSS.hostname
+            ss["port"] = urlSS.port
+            ss["cipher"] = cipher
+            ss["password"] = password
+            query = dict(urlparse.parse_qsl(urlSS.query))
+            ss["udp"] = True
+            if get(query.get("udp-over-tcp")) == "true" or get(query.get("uot")) == "1":
+                ss["udp"] = True
+            if "obfs" in get(query.get("plugin")):
+                obfsParam = get(query.get("plugin-opts")).split(";")
+                ss["plugin"] = "obfs"
+                ss["plugin-opts"] = {
+                    "host": obfsParam[2][10:],
+                    "mode": obfsParam[1][5:],
+                }
+            proxies.append(ss)
+
         elif scheme == "ssr":
-            pass
+            try:
+                dcBuf = base64RawStdDecode(body)
+            except:
+                continue
+
+            try:
+                before, after = dcBuf.split("/?", 1)
+            except:
+                continue
+
+            beforeArr = before.split(":")
+
+            if len(beforeArr) < 6:
+                continue
+
+            host = beforeArr[0]
+            port = beforeArr[1]
+            protocol = beforeArr[2]
+            method = beforeArr[3]
+            obfs = beforeArr[4]
+            password = base64RawURLDecode(urlSafe(beforeArr[5]))
+
+            try:
+                query = dict(urlparse.parse_qsl(urlSafe(after)))
+            except:
+                continue
+
+            remarks = base64RawURLDecode(query.get("remarks"))
+            name = uniqueName(names, remarks)
+
+            obfsParam = get(query.get("obfsparam"))
+            protocolParam = get(query.get("protoparam"))
+
+            ssr = {}
+
+            ssr["name"] = name
+            ssr["type"] = scheme
+            ssr["server"] = host
+            ssr["port"] = port
+            ssr["cipher"] = method
+            ssr["password"] = password
+            ssr["protocol"] = protocol
+            ssr["udp"] = True
+
+            if obfsParam != "":
+                ssr["obfs-param"] = obfsParam
+
+            if protocolParam != "":
+                ssr["protocol-param"] = protocolParam
+            
+            proxies.append(ssr)
+
+
     if len(proxies) == 0:
-        return None
+        raise Exception("No valid proxies found")
 
     return proxies
 

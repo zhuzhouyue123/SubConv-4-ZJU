@@ -19,7 +19,7 @@ REGION_DICT = {
         }
 
 # parse yaml
-def parseYAML(content):
+def parseSubs(content):
     try:
         proxies =  yaml.safe_dump(
             {"proxies": yaml.load(content, Loader=yaml.FullLoader).get("proxies")},
