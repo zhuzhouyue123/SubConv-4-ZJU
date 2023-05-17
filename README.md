@@ -7,6 +7,7 @@ demo: <https://zju.sub-converter.geniucker.top>
 > ***有能力请自行部署，因为vercel仓库所有者可以通过日志看到一个小时内发生错误的那次请求的请求参数***，当然我不会闲着没事去看，但请自行评估风险
 
 ## 功能
+- 支持Clash配置和V2ray格式的base64链接（即原始订阅不一定是Clash）  
 - 一个可以勉强能看的订阅转换 Web-UI (感谢 [@Musanico](https://github.com/musanico))  
 - 大体基于 ACL 的规则（包括了ZJU专用规则）  
 - 基于 Provider 的节点自动更新  
@@ -21,7 +22,7 @@ demo: <https://zju.sub-converter.geniucker.top>
 这一页只是简单说明，详细用法和**部署方法**请看[Wiki](https://github.com/Geniucker/sub-conv/wiki) (英文写的)  
 
 ##说明
-~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~ 现理论上适配所有机场，只需原始配置是Clash配置即可，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点(不需要自动更新的脚本，是clash核心本身支持的)<br>
+~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~ 现理论上适配所有机场，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点(不需要自动更新的脚本，是clash核心本身支持的)<br>
 本项目地址：<https://github.com/Geniucker/sub-conv-4-ZJU><br>
 规则来源：浙大和通用规则<https://github.com/Mythologyli/ZJU-Rule>和我的自定义规则<https://github.com/Geniucker/sub-conv/tree/custom-rules><br>
 代码直接读取的规则具体参见`modules/ruleList.py`<br>
