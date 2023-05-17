@@ -56,7 +56,7 @@ def sub():
     for i in range(len(url)):
         # the test of response
         respText = requests.get(url[i], headers={'User-Agent':'clash'}).text
-        content.append(snippet.parseYAML(respText))
+        content.append(snippet.parseSubs(respText))
         url[i] = "{}provider?{}".format(request.url_root, urlencode({"url": url[i]}))
     if urlstandby:
         for i in range(len(urlstandby)):
@@ -74,7 +74,7 @@ def sub():
 def provider():
     headers = {'Content-Type': 'text/yaml;charset=utf-8'}
     url = request.args.get("url")
-    return snippet.parseYAML(
+    return snippet.parseSubs(
         requests.get(url, headers={'User-Agent':'clash'}).text
     ), headers
 
