@@ -8,7 +8,19 @@ from urllib.parse import urlencode, unquote
 from gevent import pywsgi
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="mainpage")
+
+
+# route for mainpage
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
+@app.route("/index.js")
+def indexjs():
+    return app.send_static_file("index.js")
+@app.route("/index.css")
+def indexcss():
+    return app.send_static_file("index.css")
 
 
 # subscription converter api
