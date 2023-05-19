@@ -39,4 +39,8 @@ demo: <https://sub-converter.geniucker.top>
 ## 致谢
 - [ZJU-Rule](https://github.com/Mythologyli/ZJU-Rule/)  
 - [subconverter](https://github.com/tindy2013/subconverter)  
+- [Clash.Meta](https://github.com/MetaCubeX/Clash.Meta)  
 - ~~[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)~~  
+
+## 许可证
+本项目采用 [MIT License](https://github.com/Geniucker/sub-conv/blob/main/LICENSE) 分发  
