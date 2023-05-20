@@ -92,7 +92,8 @@ if __name__ == "__main__":
     parser.add_argument("--port", "-P", type=int, default=443, help="port of the api, default: 443")
     parser.add_argument("--host", "-H", type=str, default="0.0.0.0", help="host of the api, default: 0.0.0.0")
     args = parser.parse_args()
-    print(args.host, args.port)
+    print("host:", args.host)
+    print("port:", args.port)
     # Debug
     # app.run(host=args.host, port=args.port, debug=True)
     # Production
