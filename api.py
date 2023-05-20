@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding=utf-8
 from modules import pack
 from modules import snippet
@@ -6,6 +7,7 @@ from flask import Flask, request, render_template
 import requests
 from urllib.parse import urlencode, unquote
 from gevent import pywsgi
+import argparse
 
 
 app = Flask(__name__, static_folder="mainpage")
@@ -86,8 +88,13 @@ def provider():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--port", "-P", type=int, default=443, help="port of the api, default: 443")
+    parser.add_argument("--host", "-H", type=str, default="0.0.0.0", help="host of the api, default: 0.0.0.0")
+    args = parser.parse_args()
+    print(args.host, args.port)
     # Debug
-    # app.run(host="0.0.0.0", port=443, debug=True)
+    # app.run(host=args.host, port=args.port, debug=True)
     # Production
-    server = pywsgi.WSGIServer(('0.0.0.0', 443), app)
+    server = pywsgi.WSGIServer((args.host, args.port), app)
     server.serve_forever()
