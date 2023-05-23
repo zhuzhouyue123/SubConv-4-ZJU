@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.1.0] - 2023-05-24
+### Changed
+- perf: 删除了原有的针对meta的组内filter，因为原版clash也已实现 @Geniucker  
+
 ## [6.0.0] - 2023-05-19
 ### Changed
 - feat: 支持了hysteria, vmess, vless, trojan, vless, ss, ssr的base64订阅，也就是基本上所有订阅都能用了 @Geniucker  
