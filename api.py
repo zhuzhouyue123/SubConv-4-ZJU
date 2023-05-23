@@ -17,9 +17,9 @@ app = Flask(__name__, static_folder="mainpage")
 @app.route("/")
 def index():
     return app.send_static_file("index.html")
-@app.route("/index.js")
+@app.route("/main.js")
 def indexjs():
-    return app.send_static_file("index.js")
+    return app.send_static_file("main.js")
 @app.route("/index.css")
 def indexcss():
     return app.send_static_file("index.css")
@@ -37,7 +37,6 @@ def sub():
 
     short = args.get("short")
 
-    meta = args.get("meta")  # judge if using the config of clash meta
 
     # get the url of original subscription
     url = args.get("url")
@@ -73,7 +72,7 @@ def sub():
     # get the domain or ip of this api to add rule for this
     domain = re.search(r"([^:]+)(:\d{1,5})?", request.host).group(1)
     # generate the subscription
-    result = pack.pack(url=url, urlstandby=urlstandby, content=content, interval=interval, domain=domain, meta=meta, short=short)
+    result = pack.pack(url=url, urlstandby=urlstandby, content=content, interval=interval, domain=domain, short=short)
     return result, headers
 
 

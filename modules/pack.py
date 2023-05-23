@@ -9,7 +9,7 @@ import config
 import cache
 
 
-def pack(url: list, urlstandby, content: str, interval, domain, meta, short):
+def pack(url: list, urlstandby, content: str, interval, domain, short):
     regionDict, total = snippet.mkList(content)  # regions available and corresponding group name
     result = ""
 
@@ -33,9 +33,6 @@ def pack(url: list, urlstandby, content: str, interval, domain, meta, short):
     result += head.PROVIDER_HEAD
     for u in range(len(url)):
         result += head.PROVIDER_BASE0.format(u, url[u], interval, u)
-        if meta is None:
-            for i in regionDict[u]:
-                result += head.PROVIDER_BASE1.format(i+str(u), url[u], interval, str(u), regionDict[u][i][0])
     if urlstandby:
         for u in range(len(urlstandby)):
             result += head.PROVIDER_BASE0.format("sub"+str(u), urlstandby[u], interval, "sub"+str(u))
@@ -74,24 +71,14 @@ def pack(url: list, urlstandby, content: str, interval, domain, meta, short):
             if region is None:
                 result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
             else:
-                if meta is None:
-                    tmp = ""
-                    for i in region:
-                        if i in total:
-                            for u in range(len(url)):
-                                if i in regionDict[u]:
-                                    tmp += "      - " + i + str(u) + "\n"
-                    if tmp != "":
-                        result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], tmp)
-                else:
-                    tmp = []
-                    for i in region:
-                        if i in total:
-                            tmp.append(total[i][0])
-                    if len(tmp) > 0:
-                        result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
-                        result += "    filter: \"{}\"".format("|".join(tmp))
-                        result += "\n"
+                tmp = []
+                for i in region:
+                    if i in total:
+                        tmp.append(total[i][0])
+                if len(tmp) > 0:
+                    result += head.PROXY_GROUP_PROXY_ANYCAST.format(group["name"], subscriptions)
+                    result += "    filter: \"{}\"".format("|".join(tmp))
+                    result += "\n"
 
         elif type == "select":
             prior = group["prior"]
@@ -103,21 +90,11 @@ def pack(url: list, urlstandby, content: str, interval, domain, meta, short):
                 result += head.PROXY_GROUP_PROXY_FIRST.format(group["name"], regionGroups)
 
     # add region groups
-    if meta is None:
-        for i in total:
-            tmp = ""
-            for u in range(len(url)):
-                if i in regionDict[u]:
-                    tmp += "      - " + i + str(u) + "\n"
-            tmp = tmp[:-1]
-            result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], tmp)
+    for i in total:
+        result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], subscriptions)
+        result += "    filter: \"{}\"".format(total[i][0])
         result += "\n"
-    else:
-        for i in total:
-            result += head.PROXY_GROUP_REGION_GROUPS.format(total[i][1], subscriptions)
-            result += "    filter: \"{}\"".format(total[i][0])
-            result += "\n"
-        result += "\n"
+    result += "\n"
 
     # rules
     result += ("rules:\n  - DOMAIN,{},DIRECT\n".format(domain) + cache.cache)
