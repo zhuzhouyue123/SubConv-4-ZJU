@@ -22,6 +22,7 @@ demo: <https://zju.sub-converter.geniucker.top>
 这一页只是简单说明，详细用法和**部署方法**请看[Wiki](https://github.com/Geniucker/sub-conv/wiki) (英文写的)  
 
 ## 说明
+**若为原版内核需要v1.15.0或更新，否则会出现地区分组分类失败的情况**  
 ~~本接口适用于一元机场的订阅转换（大概率不适用于别的机场）~~ 现理论上适配所有机场，由于使用了clash特性proxy-provider，Linux用户只需保存转换后的配置可实现自动更新节点(不需要自动更新的脚本，是clash核心本身支持的)<br>
 本项目地址：<https://github.com/Geniucker/sub-conv-4-ZJU><br>
 规则来源：浙大和通用规则<https://github.com/Mythologyli/ZJU-Rule>和我的自定义规则<https://github.com/Geniucker/sub-conv/tree/custom-rules><br>
