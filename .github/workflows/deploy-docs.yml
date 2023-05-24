@@ -1,0 +1,44 @@
+name: Deploy Docs
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+    paths:
+      - 'docs/**'
+      - '.github/workflows/deploy-docs.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  defaults:
+    run:
+      working-directory: docs
+  steps:
+    - uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3.6.0
+      with:
+        node-version: 18.15.0
+        cache: yarn
+        cache-dependency-path: package.json
+    - name: Install Dependencies
+      run: yarn --prefer-offline
+    - name: Build
+      run: yarn docs:build
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        path: docs/.vuepress/dist
+  
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.artifact_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        use: actions/deploy-pages@v2
