@@ -2,3 +2,6 @@ __pycache__/
 .vscode/
 .vercel
 test.py
+node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/

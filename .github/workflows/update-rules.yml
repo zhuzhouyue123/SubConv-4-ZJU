@@ -11,7 +11,7 @@ on:
       - main
     paths:
         - '*.list'
-        - '.github/workflows/**.yml'
+        - '.github/workflows/update-rules.yml'
         - 'config.py'
 permissions:
   contents: write
@@ -20,6 +20,7 @@ jobs:
   sync:
     name: 'make rule cache'
     runs-on: ubuntu-latest
+    if: github.repository != 'Geniucker/sub-conv'
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
