@@ -15,6 +15,13 @@ export default defineConfig({
     ],
     editLink: {
       pattern: 'https://github.com/Geniucker/sub-conv/edit/main/docs/:path'
+    },
+    search: {
+      provider: 'local'
+    },
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2022-present Geniucker'
     }
   }
 })
