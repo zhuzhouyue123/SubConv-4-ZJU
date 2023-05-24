@@ -4,14 +4,23 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - master
+      - main
     paths:
       - 'docs/**'
       - '.github/workflows/deploy-docs.yml'
 
+env:
+  TZ: Asia/Shanghai
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository == 'Geniucker/sub-conv'
     defaults:
       run:
         working-directory: docs
@@ -22,7 +31,7 @@ jobs:
         with:
           node-version: 18.15.0
           cache: yarn
-          cache-dependency-path: package.json
+          cache-dependency-path: docs/yarn.lock
       - name: Install Dependencies
         run: yarn --prefer-offline
       - name: Build

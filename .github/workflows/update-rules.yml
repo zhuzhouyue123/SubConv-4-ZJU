@@ -11,7 +11,7 @@ on:
       - main
     paths:
         - '*.list'
-        - '.github/workflows/**.yml'
+        - '.github/workflows/update-rules.yml'
         - 'config.py'
 permissions:
   contents: write
