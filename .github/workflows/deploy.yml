@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - mainpage/**
+
+env:
+  TZ: Asia/Shanghai
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: mainpage
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: dev
+      - name: Setup Node.js
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: 18.15.0
+          cache: npm
+          cache-dependency-path: mainpage/package-lock.json
+      - name: Install Dependencies
+        run: npm install --prefer-offline
+      - name: Build
+        run: npm run build
+      - name: move to static
+        run: |
+          pwd
+          if [ ! -d "../static" ]; then
+            mkdir -p ../static
+          fi
+          mv dist/* ../static
+          git config --global user.name 'Git bot'
+          git config --global user.email 'bot@noreply.github.com'
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git add -A
+          git commit -m "update static page"
+          git push
