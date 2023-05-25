@@ -41,26 +41,33 @@ function sidebarGuide() {
       text: 'Introduction',
       collapsed: false,
       items: [
-        { text: 'What is sub-conv', link: '/guide/introduction/what-is-sub-conv' },
-        { text: 'Why sub-conv', link: '/guide/introduction/why-sub-conv' },
-        { text: 'Getting Started', link: '/guide/introduction/getting-started' }
+        { text: 'What is sub-conv', link: '../introduction/what-is-sub-conv' },
+        { text: 'Why sub-conv', link: '../introduction/why-sub-conv' },
+        { text: 'Getting Started', link: '../introduction/getting-started' }
       ]
     },
     {
       text: 'Deploy',
       collapsed: false,
       items: [
-        { text: 'Deploy on Vercel', link: '/guide/deploy/vercel' },
-        { text: 'Deploy on VPS or PC', link: '/guide/deploy/vps' }
+        { text: 'Deploy on Vercel', link: '../deploy/vercel' },
+        { text: 'Deploy on VPS or PC', link: '../deploy/vps' }
       ]
     },
     {
       text: 'Configuration',
       collapsed: false,
       items: [
-        { text: 'Rule Set', link: '/guide/configuration/rule-set' },
-        { text: 'Proxy Groups', link: '/guide/configuration/proxy-groups' },
-        { text: 'Cache Rules Automatically', link: '/guide/configuration/cache' }
+        { text: 'Rule Set', link: '../configuration/rule-set' },
+        { text: 'Proxy Groups', link: '../configuration/proxy-groups' },
+        { text: 'Cache Rules Automatically', link: '../configuration/cache' }
+      ]
+    },
+    {
+      text: 'Advanced Usage',
+      collapsed: false,
+      items: [
+        { text: 'APIs', link: '../advanced-usage/apis' }
       ]
     }
   ]

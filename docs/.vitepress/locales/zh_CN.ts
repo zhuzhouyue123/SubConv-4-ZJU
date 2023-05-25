@@ -41,27 +41,35 @@ function sidebarGuide() {
       text: '简介',
       collapsed: false,
       items: [
-        { text: '什么是 sub-conv', link: '/zh_CN/guide/introduction/what-is-sub-conv' },
-        { text: '为什么使用 sub-conv', link: '/zh_CN/guide/introduction/why-sub-conv' },
-        { text: '开始使用', link: '/zh_CN/guide/introduction/getting-started' }
+        { text: '什么是 sub-conv', link: '../introduction/what-is-sub-conv' },
+        { text: '为什么使用 sub-conv', link: '../introduction/why-sub-conv' },
+        { text: '开始使用', link: '../introduction/getting-started' }
       ]
     },
     {
       text: '部署',
       collapsed: false,
       items: [
-        { text: '在 Vercel 上部署', link: '/zh_CN/guide/deploy/vercel' },
-        { text: '在 VPS 或 PC 上部署', link: '/zh_CN/guide/deploy/vps' }
+        { text: '在 Vercel 上部署', link: '../deploy/vercel' },
+        { text: '在 VPS 或 PC 上部署', link: '../deploy/vps' }
       ]
     },
     {
       text: '配置',
       collapsed: false,
       items: [
-        { text: '规则集', link: '/zh_CN/guide/configuration/rule-set' },
-        { text: 'Proxy Groups', link: '/zh_CN/guide/configuration/proxy-groups' },
-        { text: '规则自动缓存', link: '/zh_CN/guide/configuration/cache' }
+        { text: '规则集', link: '../configuration/rule-set' },
+        { text: 'Proxy Groups', link: '../configuration/proxy-groups' },
+        { text: '规则自动缓存', link: '../configuration/cache' }
+      ]
+    },
+    {
+      text: '高级用法',
+      collapsed: false,
+      items: [
+        { text: 'APIs', link: '../advanced-usage/apis' }
       ]
     }
+
   ]
 }

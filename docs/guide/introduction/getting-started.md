@@ -8,3 +8,4 @@ To get started with sub-conv, you can either deploy it on Vercel or deploy it on
 
 ## Usage
 Open the link where you deployed sub-conv, and you will see the web UI. It will help you get the link of the new subscription.  
+Some feature is not fully supported in the web UI, so you can consult [Advanced Usage](../advanced-usage/apis.md) for more information.  
