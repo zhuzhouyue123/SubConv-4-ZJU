@@ -1,6 +1,6 @@
 # Getteing Started
 
-To get started with sub-conv, you can either deploy it on Vercel or deploy it on your own VPS.  
+To get started with sub-conv, you can either deploy it on Vercel or deploy it on your own VPS. If you want to try it out first, you can use the demo given in the README of the repo.   
 
 ## Deploy
 - [Deploy on Vercel](/guide/deploy/vercel)
