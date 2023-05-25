@@ -4,7 +4,9 @@ on:
   workflow_dispatch: {}
   push:
     branches:
-      - dev
+      - main
+    paths:
+      - mainpage/**
 
 env:
   TZ: Asia/Shanghai
