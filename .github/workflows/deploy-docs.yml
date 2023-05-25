@@ -20,7 +20,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'Geniucker/sub-conv'
+    if: github.repository == 'SubConv/SubConv'
     defaults:
       run:
         working-directory: docs
