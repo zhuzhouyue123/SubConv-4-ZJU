@@ -17,10 +17,10 @@ demo: <https://sub-converter.geniucker.top>
 - 支持配置文件 (`config.py`，之后说不定会写subconverter配置到本项目的转换)  
 
 ## 文档
-[docs](https://docs-sub-conv.geniucker.top)  
+[docs](https://docs-sub-conv.geniucker.top) (中英都有, 但是机翻)  
 
 ## 使用
-~~如需使用请自行部署（因为vercel每个人的用量是有限的，太多人用会挂）~~ 新开了个vercel号用于demo。你可以用上面的demo（不保证可用性，但基本上不会出啥问题），也可以自己部署，推荐部署在vercel，一是免费，二是规则缓存在仓库里，更新的时候Vercel会自动更新。部署方法见 [docs](https://docs-sub-conv.geniucker.top) (英文写的)  
+~~如需使用请自行部署（因为vercel每个人的用量是有限的，太多人用会挂）~~ 新开了个vercel号用于demo。你可以用上面的demo（不保证可用性，但基本上不会出啥问题），也可以自己部署，推荐部署在vercel，一是免费，二是规则缓存在仓库里，更新的时候Vercel会自动更新。部署方法见 [docs](https://docs-sub-conv.geniucker.top) (中英都有)  
 
 ## 说明
 **若为原版内核需要v1.15.0或更新，否则会出现地区分组分类失败的情况**  

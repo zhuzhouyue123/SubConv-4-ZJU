@@ -16,9 +16,9 @@ hero:
 
 features:
   - title: 易于部署
-    details: 它可以轻松部署在 Vercel 上
+    details: 它可以轻松部署在 Vercel 或 VPS 上
   - title: 安全
-    details: 它部署在您自己的 Vercel 账户上，因此没有其他人可以看到您的数据
+    details: 它部署在您自己的 Vercel 或 VPS 上，因此没有其他人可以看到您的数据
   - title: 使用 proxy-provider
     details: 通过使用 proxy-provider，代理可以在任何平台上自动更新
   - title: 易于定制

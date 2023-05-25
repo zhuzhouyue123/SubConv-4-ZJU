@@ -32,18 +32,23 @@ example: suppose you need `example.is-an.app`
 ```
 
 ## 步骤
-### 1. 部署 sub-conv
+### 启用 Actions
 1. Fork 这个仓库。按钮在仓库页面的右上角。你可以在新标签页中打开它。  
-2. 然后你应该在 Vercel 上部署它，并添加你自己的域名（我称之为 sun-conv 的域名）。如果你熟悉 Vercel，可以跳过这部分。  
-   然后登录 Vercel。如果你没有账号，请注册一个。  
-   <img src="https://user-images.githubusercontent.com/61449208/215020343-73b16ca4-f7da-4fd1-93e5-4079ae2e000b.png" width=600rem>  
-   点击 "Add New ..." 按钮，选择 "Project"  
-   如果这是你第一次使用 vercel，你将被要求链接到一个 git 服务，选择 GitHub 并完成授权。  
-   点击项目右侧的 "import" 按钮，克隆 https://github.com/Geniucker/sub-conv  
-   <img src="https://user-images.githubusercontent.com/61449208/227724506-e21e3d29-1ab7-4666-8196-73245e771013.png" width=600rem>  
-   然后点击 "Deploy" 按钮，等待部署完成。  
-   点击 "Continue to dashboard" 按钮，进入仪表盘。  
-   点击 "View Domain" 并添加你自己的域名。别忘了根据 Vercel 的指示为你的域名添加 CNAME 记录。  
-   <img src="https://user-images.githubusercontent.com/61449208/215022208-f1f4e13b-ba79-47e0-bf94-1b2f050c741f.png" width=600rem>  
+2. 切换到 "Actions" 菜单并启用它。然后手动触发一次 action 来缓存规则。（通常你以后不需要再这么做了）
+   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/2653bd8d-3750-4d1d-a587-1d806293239b" width=600rem>  
+   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/e30952b0-4217-4d4b-b922-4ff907d4f45e" width=600rem>    
+
+### 部署 sub-conv
+然后你应该在 Vercel 上部署它，并添加你自己的域名（我称之为 sun-conv 的域名）。如果你熟悉 Vercel，可以跳过这部分。  
+  然后登录 Vercel。如果你没有账号，请注册一个。  
+  <img src="https://user-images.githubusercontent.com/61449208/215020343-73b16ca4-f7da-4fd1-93e5-4079ae2e000b.png" width=600rem>  
+  点击 "Add New ..." 按钮，选择 "Project"  
+  如果这是你第一次使用 vercel，你将被要求链接到一个 git 服务，选择 GitHub 并完成授权。  
+  点击项目右侧的 "import" 按钮，克隆 https://github.com/Geniucker/sub-conv  
+  <img src="https://user-images.githubusercontent.com/61449208/227724506-e21e3d29-1ab7-4666-8196-73245e771013.png" width=600rem>  
+  然后点击 "Deploy" 按钮，等待部署完成。  
+  点击 "Continue to dashboard" 按钮，进入仪表盘。  
+  点击 "View Domain" 并添加你自己的域名。别忘了根据 Vercel 的指示为你的域名添加 CNAME 记录。  
+  <img src="https://user-images.githubusercontent.com/61449208/215022208-f1f4e13b-ba79-47e0-bf94-1b2f050c741f.png" width=600rem>  
 
 ## 完成

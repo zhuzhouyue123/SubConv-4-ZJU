@@ -21,7 +21,7 @@ export default defineConfig({
     },
     footer: {
       message: '在 MIT 许可证下发布。',
-      copyright: 'Copyright © 2022-现在 Geniucker'
+      copyright: 'Copyright © 2022-现在 <a href="https://github.com/Geniucker" target="_blank">@Geniucker</a>'
     }
   }
 })
