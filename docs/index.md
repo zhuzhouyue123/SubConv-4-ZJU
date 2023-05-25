@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: sub-conv
+  name: SubConv
   text: Yet Another Subscription Converter for Clash
   tagline: Easy-to-Deploy Clash Subscription Converter
+  image:
+    src: /logo.jpg
+    alt: SubConv Logo
   actions:
     - theme: brand
       text: Get Started

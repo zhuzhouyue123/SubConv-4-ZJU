@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: sub-conv
+  name: SubConv
   text: 又一个 Clash 订阅转换器
   tagline: 易于部署的 Clash 订阅转换器
+  image:
+    src: /logo.jpg
+    alt: SubConv Logo
   actions:
     - theme: brand
       text: 开始使用
