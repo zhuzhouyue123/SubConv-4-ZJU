@@ -20,7 +20,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'SubConv/SubConv'
+    if: github.repository == 'SubConv/SubConv-4-ZJU'
     defaults:
       run:
         working-directory: mainpage
