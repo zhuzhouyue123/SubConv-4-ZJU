@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: sub-conv
+  name: SubConv
   text: Yet Another Subscription Converter for Clash
   tagline: Easy-to-Deploy Clash Subscription Converter
+  image:
+    src: /logo.jpg
+    alt: SubConv Logo
   actions:
     - theme: brand
       text: Get Started
@@ -16,9 +19,9 @@ hero:
 
 features:
   - title: Easy to Deploy
-    details: It can be easily deployed on Vercel
+    details: It can be easily deployed on Vercel or Your VPS
   - title: Safe
-    details: It's deployed on your own Vercel account, so nobody else can see your data
+    details: It's deployed on your own Vercel or VPS, so nobody else can see your data
   - title: Using proxy-provider
     details: By using proxy-provider, the proxies can be updated automatically on any platform
   - title: Easy to Customize
