@@ -47,4 +47,4 @@ demo: <https://zju.sub-converter.geniucker.top>
 - ~~[Proxy Provider Converter](https://github.com/qier222/proxy-provider-converter)~~  
 
 ## 许可证
-本项目采用 [MIT License](https://github.com/Geniucker/sub-conv/blob/main/LICENSE) 分发  
+本项目采用 [MPL-2.0 License](https://github.com/Geniucker/sub-conv/blob/main/LICENSE) 分发  
