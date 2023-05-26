@@ -13,15 +13,15 @@
             </div>
 
             <el-form label-position="labelPosition" label-width="100px" class="main">
-                <el-form-item label="订阅链接" prop="desc">
+                <el-form-item label="订阅链接">
                     <el-input type="textarea" v-model="linkInput" rows="5"
                         placeholder="请粘贴订阅链接，仅支持Clash订阅，多个订阅链接请用逗号隔开"></el-input>
                 </el-form-item>
-                <el-form-item label="更新间隔" prop="time">
+                <el-form-item label="更新间隔">
                     <el-input v-model="time" style="width: 100px" placeholder=""></el-input>
                     秒，默认为1800
                 </el-form-item>
-                <el-form-item label="新订阅链接" prop="desc">
+                <el-form-item label="新订阅链接">
                     <el-input type="textarea" v-model="linkOutput" rows="1"></el-input>
                 </el-form-item>
                 <el-form-item>
@@ -72,7 +72,7 @@ export default {
         submitForm() {
             let result = window.location.protocol + "//" + window.location.host
             if (this.linkInput !== "") {
-                result += "/sub?url=" + this.linkInput;
+                result += "/sub?url=" + encodeURIComponent(this.linkInput);
                 if (this.time !== "") {
                     if (/^[1-9][0-9]*$/.test(this.time)) {
                         result += "&interval=" + this.time;

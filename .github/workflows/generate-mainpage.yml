@@ -1,4 +1,4 @@
-name: Deploy
+name: Genarate static mainpage
 
 on:
   workflow_dispatch: {}
@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - mainpage/**
+      - .github/workflows/generate-mainpage.yml
 
 env:
   TZ: Asia/Shanghai
@@ -19,15 +20,16 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: github.repository == 'SubConv/SubConv'
     defaults:
       run:
         working-directory: mainpage
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: dev
+          ref: main
       - name: Setup Node.js
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v3
         with:
           node-version: 18.15.0
           cache: npm
@@ -41,11 +43,12 @@ jobs:
           pwd
           if [ ! -d "../static" ]; then
             mkdir -p ../static
+          else
+            rm -rf ../static/*
           fi
           mv dist/* ../static
           git config --global user.name 'Git bot'
           git config --global user.email 'bot@noreply.github.com'
-          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add -A
-          git commit -m "update static page"
-          git push
+          git commit -am "update static" && git push || echo "No changes to commit"

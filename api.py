@@ -10,19 +10,17 @@ from gevent import pywsgi
 import argparse
 
 
-app = Flask(__name__, static_folder="mainpage")
+app = Flask(__name__, static_folder="static")
 
 
-# route for mainpage
 @app.route("/")
-def index():
+def mainpage():
     return app.send_static_file("index.html")
-@app.route("/main.js")
-def indexjs():
-    return app.send_static_file("main.js")
-@app.route("/index.css")
-def indexcss():
-    return app.send_static_file("index.css")
+# route for mainpage
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def index(path):
+    return app.send_static_file(path)
 
 
 # subscription converter api
