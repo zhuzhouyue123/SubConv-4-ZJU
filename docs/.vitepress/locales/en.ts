@@ -51,7 +51,8 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         { text: 'Deploy on Vercel', link: '../deploy/vercel' },
-        { text: 'Deploy on VPS or PC', link: '../deploy/vps' }
+        { text: 'Deploy on VPS or PC', link: '../deploy/vps' },
+        { text: 'How to Update', link: '../deploy/update' }
       ]
     },
     {
