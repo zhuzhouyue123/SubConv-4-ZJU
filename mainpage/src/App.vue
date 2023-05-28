@@ -14,7 +14,7 @@
 
             <el-form label-position="labelPosition" label-width="100px" class="main">
                 <el-form-item label="订阅链接">
-                    <el-input type="textarea" v-model="linkInput" rows="5"
+                    <el-input type="textarea" v-model="linkInput" rows="5" resize="none"
                         placeholder="请粘贴订阅链接，仅支持Clash订阅，多个订阅链接请用逗号隔开"></el-input>
                 </el-form-item>
                 <el-form-item label="更新间隔">
@@ -22,7 +22,7 @@
                     秒，默认为1800
                 </el-form-item>
                 <el-form-item label="新订阅链接">
-                    <el-input type="textarea" v-model="linkOutput" rows="1"></el-input>
+                    <el-input type="textarea" v-model="linkOutput" rows="2" resize="none"></el-input>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="submitForm('ruleForm')">生成</el-button>

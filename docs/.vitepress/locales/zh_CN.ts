@@ -51,7 +51,8 @@ function sidebarGuide() {
       collapsed: false,
       items: [
         { text: '在 Vercel 上部署', link: '../deploy/vercel' },
-        { text: '在 VPS 或 PC 上部署', link: '../deploy/vps' }
+        { text: '在 VPS 或 PC 上部署', link: '../deploy/vps' },
+        { text: '如何更新', link: '../deploy/update' }
       ]
     },
     {
