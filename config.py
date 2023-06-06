@@ -6,6 +6,7 @@ ruleset = [
     ["✔ ZJU-INTL", "https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/ZJU-INTL.list"],
     ["✔ ZJU", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU.list"],
     ["📃 ZJU More Scholar", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/ZJU-More-Scholar.list"],
+    ["🤖 ChatBot","https://raw.githubusercontent.com/wolf2003rain/sub-conv-4-ZJU-deploy/custom-rules/chat.list"],
     ["🤖 ChatBot", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/OpenAi.list"],
     ["🤖 ChatBot", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/Ruleset/ChatBot.list"],
     ["🎯 全球直连", "https://raw.githubusercontent.com/ZJU-Rule/ZJU-Rule/master/Clash/LocalAreaNetwork.list"],
