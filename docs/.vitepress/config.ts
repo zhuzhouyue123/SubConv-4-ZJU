@@ -7,5 +7,10 @@ export default defineConfig({
   locales: locales.locales,
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }],
-  ]
+  ],
+  themeConfig: {
+    search: {
+      provider: 'local'
+    }
+  }
 })

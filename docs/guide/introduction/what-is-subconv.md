@@ -1,16 +1,16 @@
-# What is sub-conv?
+# What is SubConv?
 
-Welcome to the knowledge base of sub-conv.  
+Welcome to the knowledge base of SubConv.  
 
-[sub-conv](https://github.com/Geniucker/sub-conv) is a Clash config generator which also serves as a subscription converter. It can convert subscription of various format into Clash config file.  
+[SubConv](https://github.com/SubConv/SubConv) is a Clash config generator which also serves as a subscription converter. It can convert subscription of various format into Clash config file.  
 
 It's user-friendly and easy to use.  
 
 It's easy to deploy free of charge using [Vercel](https://vercel.com).  
 
-There are current 2 editions of sub-conv:
-- [sub-conv](https://github.com/Geniucker/sub-conv)  
-- [sub-conv-4-ZJU](https://github.com/Geniucker/sub-conv-4-ZJU): ZJU Special Edition, which has additional features for ZJU  
+There are current 2 editions of SubConv:
+- [SubConv](https://github.com/SubConv/SubConv)  
+- [SubConv-4-ZJU](https://github.com/SubConv/SubConv-4-ZJU): ZJU Special Edition, which has additional features for ZJU  
 
 ## Features
 - **Easy to deploy**: It can be easily deployed on Vercel which is free of charge  

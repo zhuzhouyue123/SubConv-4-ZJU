@@ -4,8 +4,8 @@ Here I suppose you're using Linux server.
 ## Steps
 1. Fork this repo to your own account.  
 2. switch into "Actions" menu and enable it. Then manually trigger the action for the first time to cache the rules. (Normally you don't need to do this later anymore)
-   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/2653bd8d-3750-4d1d-a587-1d806293239b" width=600rem>
-   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/e30952b0-4217-4d4b-b922-4ff907d4f45e" width=600rem>  
+   <img src="https://github.com/SubConv/SubConv/assets/61449208/2653bd8d-3750-4d1d-a587-1d806293239b" width=600rem>
+   <img src="https://github.com/SubConv/SubConv/assets/61449208/e30952b0-4217-4d4b-b922-4ff907d4f45e" width=600rem>  
 3. Use you package manager to install `python3`, `python3-pip` and `git` on your VPS. And it's ***recommended to use a reverse proxy*** to provide https. I won't talk about this here.  
 4. Clone your forked repo to your VPS and `cd` into it. (If you like, you can create virtual environment using `env`)  
 5. `pip3 install -r requirements.txt` to install dependencies.  

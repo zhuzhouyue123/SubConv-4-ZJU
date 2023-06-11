@@ -11,13 +11,10 @@ export default defineConfig({
       'zh_CN/guide/': sidebarGuide()
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Geniucker/sub-conv' }
+      { icon: 'github', link: 'https://github.com/SubConv/SubConv' }
     ],
     editLink: {
-      pattern: 'https://github.com/Geniucker/sub-conv/edit/main/docs/:path'
-    },
-    search: {
-      provider: 'local'
+      pattern: 'https://github.com/SubConv/SubConv/edit/main/docs/:path'
     },
     footer: {
       message: '在 MIT 许可证下发布。',
@@ -30,8 +27,8 @@ export default defineConfig({
 function nav() {
   return [
     { text: '首页', link: '/zh_CN/' },
-    { text: '指南', link: '/zh_CN/guide/introduction/what-is-sub-conv'},
-    { text: 'GitHub', link: 'https://github.com/Geniucker/sub-conv'}
+    { text: '指南', link: '/zh_CN/guide/introduction/what-is-subconv'},
+    { text: 'GitHub', link: 'https://github.com/SubConv/SubConv'}
   ]
 }
 
@@ -41,8 +38,8 @@ function sidebarGuide() {
       text: '简介',
       collapsed: false,
       items: [
-        { text: '什么是 sub-conv', link: '../introduction/what-is-sub-conv' },
-        { text: '为什么使用 sub-conv', link: '../introduction/why-sub-conv' },
+        { text: '什么是 SubConv', link: '../introduction/what-is-subconv' },
+        { text: '为什么使用 SubConv', link: '../introduction/why-subconv' },
         { text: '开始使用', link: '../introduction/getting-started' }
       ]
     },

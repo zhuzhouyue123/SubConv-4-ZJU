@@ -11,13 +11,10 @@ export default defineConfig({
       '/guide/': sidebarGuide()
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Geniucker/sub-conv' }
+      { icon: 'github', link: 'https://github.com/SubConv/SubConv' }
     ],
     editLink: {
-      pattern: 'https://github.com/Geniucker/sub-conv/edit/main/docs/:path'
-    },
-    search: {
-      provider: 'local'
+      pattern: 'https://github.com/SubConv/SubConv/edit/main/docs/:path'
     },
     footer: {
       message: 'Released under the MIT License.',
@@ -30,8 +27,8 @@ export default defineConfig({
 function nav() {
   return [
     { text: 'Home', link: '/' },
-    { text: 'Guide', link: '/guide/introduction/what-is-sub-conv'},
-    { text: 'GitHub', link: 'https://github.com/Geniucker/sub-conv'}
+    { text: 'Guide', link: '/guide/introduction/what-is-subconv'},
+    { text: 'GitHub', link: 'https://github.com/Geniucker/subconv'}
   ]
 }
 
@@ -41,8 +38,8 @@ function sidebarGuide() {
       text: 'Introduction',
       collapsed: false,
       items: [
-        { text: 'What is sub-conv', link: '../introduction/what-is-sub-conv' },
-        { text: 'Why sub-conv', link: '../introduction/why-sub-conv' },
+        { text: 'What is SubConv', link: '../introduction/what-is-subconv' },
+        { text: 'Why SubConv', link: '../introduction/why-subconv' },
         { text: 'Getting Started', link: '../introduction/getting-started' }
       ]
     },
