@@ -50,7 +50,7 @@ PROVIDER_BASE0 = """  subscription{}:
       enable: true
       interval: 60
       # lazy: true
-      url: http://www.apple.com/library/test/success.html
+      url: https://www.apple.com/library/test/success.html
 """
 PROVIDER_BASE1 = """  {}:
     type: http
@@ -62,7 +62,7 @@ PROVIDER_BASE1 = """  {}:
       enable: true
       interval: 60
       # lazy: true
-      url: http://www.apple.com/library/test/success.html
+      url: https://www.apple.com/library/test/success.html
 """
 
 
@@ -83,7 +83,7 @@ PROXY_GROUP_PROXY_MANUAL_SELECT = """  - name: 🚀 手动切换
 """
 PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
     type: url-test
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.apple.com/library/test/success.html
     interval: 60
     tolerance: 50
     use:
@@ -91,7 +91,7 @@ PROXY_GROUP_PROXY_AUTO_SELECT = """  - name: ♻️ 自动选择
 """
 PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
     type: fallback
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.apple.com/library/test/success.html
     interval: 60
     tolerance: 50
     use:
@@ -100,7 +100,7 @@ PROXY_GROUP_PROXY_FALLBACK = """  - name: 🔯 故障转移
 PROXY_GROUP_PROXY_ANYCAST = """  - name: {}
     type: load-balance
     strategy: consistent-hashing
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.apple.com/library/test/success.html
     interval: 60
     tolerance: 50
     use:
@@ -141,7 +141,7 @@ PROXY_GROUP_REJECT_FIRST = """  - name: {}
 """
 PROXY_GROUP_REGION_GROUPS = """  - name: {}
     type: url-test
-    url: http://www.apple.com/library/test/success.html
+    url: https://www.apple.com/library/test/success.html
     interval: 60
     tolerance: 50
     use:

@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/introduction/what-is-sub-conv
+      link: /guide/introduction/what-is-subconv
     - theme: alt
       text: View on GitHub
-      link: https://github.com/Geniucker/sub-conv
+      link: https://github.com/SubConv/SubConv
 
 features:
   - title: Easy to Deploy

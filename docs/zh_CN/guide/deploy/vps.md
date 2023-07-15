@@ -4,8 +4,8 @@
 ## 步骤
 1. Fork 这个仓库到你自己的账户。  
 2. 切换到 "Actions" 菜单并启用它。然后手动触发一次 action 来缓存规则。（通常你以后不需要再这么做了）
-   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/2653bd8d-3750-4d1d-a587-1d806293239b" width=600rem>  
-   <img src="https://github.com/Geniucker/sub-conv/assets/61449208/e30952b0-4217-4d4b-b922-4ff907d4f45e" width=600rem>    
+   <img src="https://github.com/SubConv/SubConv/assets/61449208/2653bd8d-3750-4d1d-a587-1d806293239b" width=600rem>  
+   <img src="https://github.com/SubConv/SubConv/assets/61449208/e30952b0-4217-4d4b-b922-4ff907d4f45e" width=600rem>    
 3. 使用你的包管理器在你的 VPS 上安装 `python3`、`python3-pip` 和 `git`。并且***推荐使用反向代理***来提供 https。我不会在这里讨论这个。  
 4. 克隆你 fork 的仓库到你的 VPS 并进入它。（如果你喜欢，你可以使用 `env` 创建虚拟环境）  
 5. `pip3 install -r requirements.txt` 来安装依赖。  

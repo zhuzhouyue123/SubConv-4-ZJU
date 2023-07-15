@@ -1,16 +1,16 @@
-# 什么是 sub-conv
+# 什么是 SubConv
 
-欢迎来到 sub-conv 的知识库。
+欢迎来到 SubConv 的知识库。
 
-[sub-conv](https://github.com/Geniucker/sub-conv) 是一个 Clash 配置生成器，也是一个订阅转换器。它可以将各种格式的订阅转换为 Clash 配置文件。  
+[SubConv](https://github.com/SubConv/SubConv) 是一个 Clash 配置生成器，也是一个订阅转换器。它可以将各种格式的订阅转换为 Clash 配置文件。  
 
 它易于使用。  
 
 它易于部署，可以免费使用 [Vercel](https://vercel.com) 部署。  
 
-目前有 2 个版本的 sub-conv：
-- [sub-conv](https://github.com/Geniucker/sub-conv)  
-- [sub-conv-4-ZJU](https://github.com/Geniucker/sub-conv-4-ZJU): 专为浙江大学学生定制的 sub-conv  
+目前有 2 个版本的 SubConv：
+- [SubConv](https://github.com/SubConv/SubConv)  
+- [SubConv-4-ZJU](https://github.com/SubConv/SubConv-4-ZJU): 专为浙江大学学生定制的 SubConv  
 
 ## 特性
 - **易于部署**: 它可以轻松免费部署在 Vercel 上  

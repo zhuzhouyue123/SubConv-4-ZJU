@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /zh_CN/guide/introduction/what-is-sub-conv
+      link: /zh_CN/guide/introduction/what-is-subconv
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/Geniucker/sub-conv
+      link: https://github.com/SubConv/SubConv
 
 features:
   - title: 易于部署
