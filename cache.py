@@ -6,6 +6,7 @@ And it's automatically generalted by GitHub Action
 cache="""  - DOMAIN,room.geniucker.top,✔ ZJU
   - DOMAIN,grade.geniucker.top,✔ ZJU
   - DOMAIN,blackqh.geniucker.top,✔ ZJU
+  - DOMAIN,ece220git.geniucker.top,✔ ZJU
   - DOMAIN-SUFFIX,blackmagicdesign.com,🎯 全球直连
   - DOMAIN-SUFFIX,supercell.com,🎯 全球直连
   - DOMAIN-SUFFIX,clashroyale.com,🎯 全球直连
@@ -159,6 +160,17 @@ cache="""  - DOMAIN,room.geniucker.top,✔ ZJU
   - DOMAIN-SUFFIX,zjuqsc.com,✔ ZJU
   - DOMAIN-KEYWORD,chalaoshi,✔ ZJU
   - IP-CIDR,10.0.0.0/8,✔ ZJU,no-resolve
+  - IP-CIDR,58.196.192.0/19,✔ ZJU,no-resolve
+  - IP-CIDR,58.196.224.0/20,✔ ZJU,no-resolve
+  - IP-CIDR,58.200.100.0/24,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.0.0/20,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.128.0/19,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.160.0/21,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.168.0/22,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.172.0/23,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.174.0/24,✔ ZJU,no-resolve
+  - IP-CIDR,210.32.176.0/20,✔ ZJU,no-resolve
+  - IP-CIDR,222.205.0.0/17,✔ ZJU,no-resolve
   - DOMAIN-SUFFIX,acm.org,✔ ZJU
   - DOMAIN-SUFFIX,cnki.net,✔ ZJU
   - DOMAIN-SUFFIX,gtadata.com,✔ ZJU
