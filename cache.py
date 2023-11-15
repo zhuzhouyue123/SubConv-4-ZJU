@@ -18,6 +18,7 @@ cache="""  - DOMAIN,room.geniucker.top,✔ ZJU
   - DOMAIN,az.geniucker.top,🎯 全球直连
   - DOMAIN,yacd.geniucker.top,🎯 全球直连
   - DOMAIN-SUFFIX,deepl.com,🎯 全球直连
+  - DOMAIN,couchdb.geniucker.top,🎯 全球直连
   - DST-PORT,22,🎯 全球直连
   - 404: Not Found,🛸 PT站
   - DOMAIN-SUFFIX,canvas-user-content.com,✔ ZJU-INTL
@@ -28,6 +29,8 @@ cache="""  - DOMAIN,room.geniucker.top,✔ ZJU
   - DOMAIN-SUFFIX,duosecurity.com,✔ ZJU-INTL
   - DOMAIN-SUFFIX,insops.net,✔ ZJU-INTL
   - DOMAIN-SUFFIX,zoom.us,✔ ZJU-INTL
+  - DOMAIN-SUFFIX,gradescope.com,✔ ZJU-INTL
+  - DOMAIN-SUFFIX,us.prairielearn.com,✔ ZJU-INTL
   - 404: Not Found,✔ ZJU
   - 404: Not Found,📃 ZJU More Scholar
   - DOMAIN,chat.zhile.io,🤖 ChatBot
